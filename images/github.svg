@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   role="img"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="github.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>GitHub icon</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10">
+    <filter
+       filterUnits="userSpaceOnUse"
+       height="127.001"
+       width="127.002"
+       y="0"
+       x="0"
+       id="a">
+      <feOffset
+         id="feOffset4526"
+         input="SourceAlpha"
+         dy="3" />
+      <feGaussianBlur
+         id="feGaussianBlur4528"
+         result="b"
+         stdDeviation="3" />
+      <feFlood
+         id="feFlood4530"
+         flood-opacity="0.161" />
+      <feComposite
+         result="result1"
+         id="feComposite4532"
+         in2="b"
+         operator="in" />
+      <feComposite
+         id="feComposite4534"
+         in2="result1"
+         in="SourceGraphic" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Drop Shadow"
+       id="filter5031">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood5021" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite5023" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="0.5"
+         result="blur"
+         id="feGaussianBlur5025" />
+      <feOffset
+         dx="1.52656e-15"
+         dy="0.5"
+         result="offset"
+         id="feOffset5027" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite5029" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     id="namedview8"
+     showgrid="false"
+     inkscape:zoom="13.906433"
+     inkscape:cx="0.98495084"
+     inkscape:cy="11.538897"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <title
+     id="title2">GitHub icon</title>
+  <path
+     d="m 13.519528,-31.433436 c -30.24162,0 -54.73596,24.5080212 -54.73596,54.735951 0,24.188734 15.68186,44.701037 37.4257196,51.930747 2.73679,0.51542 3.74028997,-1.17682 3.74028997,-2.63189 0,-1.29999 -0.0456,-4.74379 -0.0684,-9.3051 -15.22570957,3.30239 -18.43688957,-7.343773 -18.43688957,-7.343773 -2.49049,-6.31743 -6.08938,-8.00512 -6.08938,-8.00512 -4.95817,-3.39363 0.38315,-3.32521 0.38315,-3.32521 5.4964,0.38315 8.38373,5.6378 8.38373,5.6378 4.880613,8.37004 12.8127696,5.95253 15.94183957,4.55221 0.49262,-3.53959 1.90207003,-5.95254 3.46661003,-7.32093 -12.155937,-1.3684 -24.9322196,-6.075696 -24.9322196,-27.048688 0,-5.975341 2.12101,-10.8559628 5.63324,-14.6874798 -0.61578,-1.382083 -2.46312,-6.946904 0.47894,-14.486782 0,0 4.584133,-1.4687492 15.05237957,5.610435 4.37888003,-1.217875 9.03143003,-1.819971 13.68399043,-1.847339 4.65256,0.02737 9.30511,0.629464 13.68399,1.847339 10.39983,-7.0791842 14.98397,-5.610435 14.98397,-5.610435 2.94205,7.539878 1.09472,13.104699 0.54735,14.486782 3.48942,3.831517 5.61044,8.7121388 5.61044,14.6874798 0,21.027728 -12.79453,25.657478 -24.97328,27.003068 1.91576,1.64208 3.69468,4.99922 3.69468,10.12616 0,7.325503 -0.0684,13.209613 -0.0684,14.988523 0,1.43683 0.95788,3.14732 3.76309,2.59997 21.89895,-7.17954 37.56711,-27.705533 37.56711,-51.857767 0,-30.2279298 -24.50802,-54.735951 -54.73595,-54.735951"
+     id="path4"
+     inkscape:connector-curvature="0"
+     style="fill:#8a8a8a;fill-opacity:1;stroke-width:4.56132936;filter:url(#filter5031)"
+     transform="matrix(0.17972881,0,0,0.17972881,9.7953298,8.0072813)" />
+</svg>
