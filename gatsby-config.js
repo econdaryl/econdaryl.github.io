@@ -2,14 +2,14 @@ let siteMetadata = {
     title: `Daryl Larsen`,
     capitalizeTitleOnHome: true,
     logo: `/images/econlogo.png`,
-    icon: `/images/econlogo.png`,
+    icon: `/images/icon.png`,
     titleImage: `/images/wall.jpg`,
-    introTag: `Economics Researcher | Federal Reserve`,
-    description: `Daryl Larsen - researcher portfolio and blog. Currently waiting to hear back from PhD programs`,
+    introTag: `Economic Researcher | Federal Reserve`,
+    description: `Daryl Larsen - Economic Researcher. Currently awaiting admissions from PhD programs`,
     author: `@econdaryl`,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
-    darkmode: true,
+    darkmode: false,
     switchTheme: true,
     navLinks: [
         {
@@ -44,6 +44,16 @@ let siteMetadata = {
             name: "Twitter",
             icon: "/images/Twitter.svg",
             url: "https://twitter.com/econdaryl"
+        },
+        {
+            name: "Instagram",
+            icon: "/images/Instagram.svg",
+            url: ""
+        },
+        {
+            name: "Youtube",
+            icon: "/images/Youtube.svg",
+            url: ""
         },
         {
             name: "Github",
@@ -104,7 +114,13 @@ module.exports = {
                             maxWidth: 1280
                         }
                     },
-                    `gatsby-remark-emoji`
+                    `gatsby-remark-emoji`,  // <-- this line adds emoji
+                    {
+                        resolve: "gatsby-remark-embed-youtube",
+                        options: {
+                            width: 800,
+                            height: 400
+                        }
                     }
                 ]
             }
