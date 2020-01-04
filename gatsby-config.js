@@ -1,15 +1,15 @@
 let siteMetadata = {
-    title: `Mark Did`,
+    title: `Daryl Larsen`,
     capitalizeTitleOnHome: true,
-    logo: `/images/emptym.png`,
-    icon: `/images/icon.png`,
+    logo: `/images/econlogo.png`,
+    icon: `/images/econlogo.png`,
     titleImage: `/images/wall.jpg`,
-    introTag: `DEVELOPER | CREATOR`,
-    description: `Mark Did - developer portfolio and blog. Currently focusing on React JS and React Native`,
-    author: `@markdid`,
+    introTag: `Economics Researcher | Federal Reserve`,
+    description: `Daryl Larsen - researcher portfolio and blog. Currently waiting to hear back from PhD programs`,
+    author: `@econdaryl`,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
-    darkmode: true,
+    darkmode: false,
     switchTheme: true,
     navLinks: [
         {
@@ -36,29 +36,19 @@ let siteMetadata = {
         },
         {
             name: "GitHub",
-            url: "https://github.com/markdid"
+            url: "https://github.com/econdaryl"
         }
     ],
     social: [
         {
             name: "Twitter",
             icon: "/images/Twitter.svg",
-            url: "https://twitter.com/_markdid"
-        },
-        {
-            name: "Instagram",
-            icon: "/images/Instagram.svg",
-            url: "https://www.instagram.com/_markdid/"
-        },
-        {
-            name: "Youtube",
-            icon: "/images/Youtube.svg",
-            url: "https://www.youtube.com/channel/UCbowPYAYlTA06EZPRIpGKZQ?view_as=subscriber"
+            url: "https://twitter.com/econdaryl"
         },
         {
             name: "Github",
             icon: "/images/github.svg",
-            url: "https://github.com/markdid"
+            url: "https://github.com/econdaryl"
         }
     ],
     contact: {
@@ -80,7 +70,7 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: "UA-148325597-1",
+                trackingId: "UA-104413128-2",
                 // Defines where to place the tracking script - `true` in the head and `false` in the body
                 head: true,
                 // Setting this parameter is optional
@@ -114,13 +104,7 @@ module.exports = {
                             maxWidth: 1280
                         }
                     },
-                    `gatsby-remark-emoji`,  // <-- this line adds emoji
-                    {
-                        resolve: "gatsby-remark-embed-youtube",
-                        options: {
-                            width: 800,
-                            height: 400
-                        }
+                    `gatsby-remark-emoji`
                     }
                 ]
             }
