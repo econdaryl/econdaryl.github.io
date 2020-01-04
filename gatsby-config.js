@@ -9,7 +9,7 @@ let siteMetadata = {
     author: `@econdaryl`,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
-    darkmode: false,
+    darkmode: true,
     switchTheme: true,
     navLinks: [
         {
