@@ -3,7 +3,7 @@ let siteMetadata = {
     capitalizeTitleOnHome: true,
     logo: `/images/econlogo.png`,
     icon: `/images/icon.png`,
-    titleImage: `/images/wall.jpg`,
+    titleImage: `/images/wall1.jpg`,
     introTag: `Economic Researcher | Federal Reserve`,
     description: `Daryl Larsen - Economic Researcher. Currently awaiting admissions from PhD programs`,
     author: `@econdaryl`,
@@ -44,16 +44,6 @@ let siteMetadata = {
             name: "Twitter",
             icon: "/images/Twitter.svg",
             url: "https://twitter.com/econdaryl"
-        },
-        {
-            name: "Instagram",
-            icon: "/images/Instagram.svg",
-            url: ""
-        },
-        {
-            name: "Youtube",
-            icon: "/images/Youtube.svg",
-            url: ""
         },
         {
             name: "Github",

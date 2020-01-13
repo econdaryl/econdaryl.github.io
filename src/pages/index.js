@@ -219,7 +219,7 @@ class IndexPage extends React.Component {
                                         height="100"
                                     />
                                     <image
-                                        xlinkHref="https://res.cloudinary.com/markdid/image/fetch/q_auto,f_auto/https://markdid.github.io/images/ocean.jpg"
+                                        xlinkHref="https://res.cloudinary.com/econdaryl/image/fetch/q_auto,f_auto/https://res.cloudinary.com/econdaryl/image/upload/v1578872553/waterton_cme6sw.jpg"
                                         height="50"
                                         width="100"
                                         y="0"
@@ -245,7 +245,7 @@ class IndexPage extends React.Component {
                             {this.props.data.site.siteMetadata.introTag}
                         </p>
                         <p className="caption text-tertiary">
-                            I made this site to show I can develop things. And create things. 👍
+                            I study urban, migration, and labor economics.
                         </p>
                         {/* <a href="https://github.com/markdid" className="btn">
                             SEE MY STUFF
