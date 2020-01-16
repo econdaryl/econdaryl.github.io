@@ -1,25 +1,19 @@
 ---
-title: Event Scheduler (beta)
-description: Event scheduler used by the BYU Law School for scheduling events and tours.
+title: Carvana App (beta)
+description: Shiny App to look at price of cars by make, model, mileage, and year.
 date: 2019-11-02
 template: portfolio
-technologies: ["ReactJS", "FeathersJS", "PostgreSQL", "Docker", "Redux"] 
+technologies: ["Python", "R", "Stata"] 
 image: ./fullscreen.png
 ---
-BYU Law School Event Scheduler
+[Carvana App](https://dblarsen.shinyapps.io/carvana/)
 
 [row]
 [col]
-![image](./admin.png)
-[/col]
-[col]
-![image](./editor.png)
-[/col]
-[col]
-![image](./user.png)
+![image](./mazda.PNG)
 [/col]
 [/row]
 
-Notable features of this tool include event creation and joining, queue management with drag and drop, sortable events by group.
+Uses regression analysis to estimate predicted price for a car of certain make, model, mileage, and year.
 
-Frontend built using React and Redux. Backend built in FeathersJS with PostgreSQL.
+Data scraped from Carvana using Python. Cleaned and analyzed using R and Stata.

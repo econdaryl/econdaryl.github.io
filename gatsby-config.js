@@ -10,19 +10,23 @@ let siteMetadata = {
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
     darkmode: false,
-    switchTheme: true,
+    switchTheme: false,
     navLinks: [
         {
             name: "HOME",
             url: "/"
         },
+		{
+			name: "CV",
+			url: "/cv"
+		},
         {
             name: "ABOUT",
             url: "/about"
         },
         {
             name: "RESEARCH",
-            url: "/research"
+            url: "/blog"
         },
         {
             name: "PORTFOLIO",
