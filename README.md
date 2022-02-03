@@ -1,172 +1,70 @@
-#Forked from Gatsby Starter Elemental
+# Getting Started with Create React App
 
-![](https://img.shields.io/badge/version-1.1.1-green.svg) ![](https://img.shields.io/badge/License-MIT-orange.svg)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-Elemental is a portfolio template suitable for artists, photographers, designers etc. With the starter you can create blog posts, portfolio posts an miscellaneous posts (such as privacy-policy).
+In the project directory, you can run:
 
-**[Live Demo](https://elemental.netlify.com)** | **[Theme](https://github.com/akzhy/gatsby-theme-elemental)**
+### `npm start`
 
-## Getting Started.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-You will need node and [Gatsby](https://www.gatsbyjs.org/tutorial/part-zero/) installed.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Start the project by 
+### `npm test`
 
-```
-gatsby new project-name https://github.com/akzhy/gatsby-starter-elemental
-cd project-name
-gatsby develop
-```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-And for the final build
+### `npm run build`
 
-```
-gatsby build
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Configuring
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Almost all features of this starter are editable. In order to personalize, open the `gatsby-config.js` file and start editing the below part.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```javascript
-// Do not remove any of the properties below.
+### `npm run eject`
 
-let siteMetadata = {
-    title: `Elemental`, // Title of your webpage
-    capitalizeTitleOnHome: true, // Whether to capitalize the letter on homepage
-    logo: `/images/logo.png`, // Logo 
-    icon: `/images/icon.png`, // Favicon, shown in the browsers "tab"
-    titleImage: `/images/wall.jpg`, // The main title is filled with an image.
-    introTag: `PHOTOGRAPHER | VIDEOGRAPHER`, // Intro tag shown below title
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
-    author: `@_akzhy`,
-    blogItemsPerPage: 10,
-    portfolioItemsPerPage: 10,
-    darkmode: true, // Whether to enable the darkmode. Change to false if you want the light mode
-    switchTheme: true, // Whether to show a switch theme button on the navbar
-    // The links shown on the navbar and footer, follow the same structure to add or remove more items.
-    navLinks: [{
-            name: "HOME",
-            url: "/"
-        },
-        {
-            name: "ABOUT",
-            url: "/about"
-        },
-        {
-            name: "BLOG",
-            url: "/blog"
-        },
-        {
-            name: "PORTFOLIO",
-            url: "/portfolio"
-        },
-        {
-            name: "CONTACT",
-            url: "/contact"
-        }
-    ],
-    // Same as navbar links, except these are shown on the footer
-    footerLinks: [{
-        name: "PRIVACY POLICY",
-        url: "/privacy-policy"
-    }],
-    // Your social profile links. The icons of the given social medias are available in the static folder. If you are adding a new item, include the icon in the static/images folder.
-    social: [{
-            name: "Facebook",
-            icon: "/images/Facebook.svg",
-            url: "#"
-        },
-        {
-            name: "Twitter",
-            icon: "/images/Twitter.svg",
-            url: "#"
-        },
-        {
-            name: "Instagram",
-            icon: "/images/Instagram.svg",
-            url: "#"
-        },
-        {
-            name: "Youtube",
-            icon: "/images/Youtube.svg",
-            url: "#"
-        }
-    ],
-    contact: {
-        /* Leave this completely empty (no space either) if you don't want a contact form. */
-        api_url: "./test.json",
-        description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
-        mail: "hi@akzhy.com",
-        phone: "000-000-0000",
-        address: "1234 \nLocation \nLocation"
-    }
-}
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-#### Creating new blog posts.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Open the `contents/blog` folder and create a new folder with the name you wish to see as the URL. Inside the folder create an `index.md` file and also include any files you wish to add.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-The frontmatter should be of the below structure
+## Learn More
 
-```
----
-title: Title of your post
-date: 2019-06-29 <-- Date should be in the given format
-template: blog <-- The template you wish to use. "blog" for blog posts
-image: ./image.jpg <-- Image shown on the list pages and also used as open graph image
-banner: ./banner.jpg <-- Banner shown in the blog post
-description: The description shown in the listing page. Also used for SEO description. 
----
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-If you don't want the blog section, simply delete everything inside the `contents/blog` folder. (Do not delete the folder itself)
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-#### Creating new portfolio posts.
+### Code Splitting
 
-Open the `contents/portfolio` folder and create a new folder with the name you wish to see as the URL. Inside the folder create an `index.md` file and also include any files you wish to add.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-The frontmatter should be of the below structure
+### Analyzing the Bundle Size
 
-```
----
-title: Title of your post
-date: 2019-06-29 <-- Date should be in the given format
-template: blog <-- The template you wish to use. "blog" for blog posts
-image: ./image.jpg <-- Image shown on the list pages and also used as open graph image
-description: The description shown in the listing page. Also used for SEO description. 
----
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Portfolio pages support the creation of grids.
+### Making a Progressive Web App
 
-To create a grid, follow the below structure
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-```
-[row]
-[col]
-**Markdown**
-[/col]
-[/row]
-```
+### Advanced Configuration
 
-The columns will have equal width on wide screens, and will expand on smaller screens.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-#### Creating miscellaneous posts
+### Deployment
 
-These posts follow the URL structure of `http://example.com/miscellaneous-post/`. They are useful for creating pages like `privacy-policy`
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-The "About" page is created as a miscellaneous post.
+### `npm run build` fails to minify
 
-
-## Contributing
-
-Any kind of contributions are welcome. Bump the version and create a PR.
-
-
-
-
-
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
