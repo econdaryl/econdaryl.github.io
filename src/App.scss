@@ -45,3 +45,14 @@ body {
 .headshot {
   border-radius: 100%;
 }
+
+.footer {
+  background-color: $main-color;
+  color: $secondary-color;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.footer p {
+  margin: 20px;
+}
