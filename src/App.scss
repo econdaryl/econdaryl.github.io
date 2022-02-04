@@ -56,3 +56,38 @@ body {
 .footer p {
   margin: 20px;
 }
+.hamburger {
+  display: none;
+}
+button {
+  background-color: $main-color;
+}
+
+@media screen and (max-width: 600px) {
+  
+    .header {
+      display: block;
+      height: 200px;
+    }
+    .hidden.menu-items {
+      display: flex;
+      flex-direction: column;
+      background-color: $main-color;
+      position: relative;
+      bottom: -140px;
+
+    }
+    .menu-items {
+      display: none;
+    }
+    .home {
+      width: 80%;
+    }
+    .hamburger {
+      display: block;
+      position: relative;
+      left: 5%;
+      bottom: -140px;
+    }
+  
+}
