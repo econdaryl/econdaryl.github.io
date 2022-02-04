@@ -11,7 +11,6 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
-        <Route index element={<Home />}></Route>
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
