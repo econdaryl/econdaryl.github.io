@@ -6,12 +6,14 @@ import NotFound from './components/NotFound';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
+import About from './components/About'
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
+        <Route path="About" element={<About />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

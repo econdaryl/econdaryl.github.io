@@ -1,4 +1,4 @@
-$main-color: #363537;
+$main-color: #040404;
 $secondary-color: #E6E8E6;
 $accent-color: #6A8E7F;
 $dark-mode-main-color: #040404;
@@ -67,6 +67,28 @@ body {
 button {
   background-color: $main-color;
 }
+.about p {
+  font-size: 16pt;
+  text-align: left;
+}
+#ryder {
+  width: 333px;
+  height: 444px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  border: 2px solid $main-color;
+}
+#map {
+  width: 280px;
+  height: 180px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  align-self: flex-end;
+}
+.container {
+  display: flex;
+  margin: 0% 15%;
+}
 
 @media screen and (max-width: 600px) {
   
@@ -93,6 +115,12 @@ button {
       position: relative;
       left: 5%;
       bottom: -140px;
+    }
+    .container {
+      display: block;
+    }
+    #map {
+      margin-left: 0px;
     }
   
 }
