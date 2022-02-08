@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
 import About from './components/About'
+import CV from './components/CV'
 
 ReactDOM.render(
   <BrowserRouter>
@@ -14,6 +15,7 @@ ReactDOM.render(
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
         <Route path="About" element={<About />} />
+        <Route path="CV" element={<CV />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

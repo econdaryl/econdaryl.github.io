@@ -89,6 +89,28 @@ button {
   display: flex;
   margin: 0% 15%;
 }
+.cvItems {
+  display: flex;
+  flex-direction: column;
+}
+.cvItems button {
+  width: 100px;
+  height: 50px;
+  align-self: center; 
+}
+.cvItems button a {
+  color: $secondary-color;
+}
+
+.cvItems button a:hover {
+  color: $accent-color;
+}
+
+iframe {
+  align-self: center;
+  width:60%;
+  height:100vh;
+}
 
 @media screen and (max-width: 600px) {
   
@@ -121,6 +143,10 @@ button {
     }
     #map {
       margin-left: 0px;
+    }
+    iframe {
+    width: 100%;
+    height: 100vh;
     }
   
 }
