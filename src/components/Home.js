@@ -6,7 +6,7 @@ export default function Home() {
       <h3>Sauder School of Business</h3>
       <h3>PhD Urban Land Economics</h3>
       <h3>
-        Interests: trains, density, stuff, stuff, and more stuff 
+        Interests: urban econ, housing, real estate, and migration 
       </h3>
       <img src="headshot.png" alt='headshot' className="headshot"/>
 
