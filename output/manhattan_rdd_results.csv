@@ -1,0 +1,6 @@
+"Specification","Coefficient","SE","t_stat","p_value","CI_lower","CI_upper","Bandwidth","N_total"
+"Local Linear (0.5km)",NA,NA,NA,NA,NA,NA,0.5,8890
+"Local Linear (1km)",NA,NA,NA,NA,NA,NA,1,17213
+"Local Linear (1.5km)",NA,NA,NA,NA,NA,NA,1.5,26606
+"Local Linear (2km)",NA,NA,NA,NA,NA,NA,2,35543
+"Local Linear (3km)",NA,NA,NA,NA,NA,NA,3,48367
