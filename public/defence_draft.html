@@ -121,6 +121,8 @@
       margin-right: 0; 
     }
   </style>
+  <script src="defence_draft_files/libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="defence_draft_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -251,27 +253,54 @@ Daryl Larsen
 <section id="cpz-impact-timeline-analysis" class="slide level2 center">
 <h2>CPZ Impact: Timeline Analysis</h2>
 <p>January usually sees fewer visits, but 2025 seems to have been particularly bad for businesses in the CPZ.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Timeline plot not found. Please run cpz_regression_analysis.R first.</code></pre>
-</div>
-</div>
-</section>
+
+<img data-src="output/cpz_visits_timeline.png" width="1500" class="r-stretch"></section>
 <section id="cpz-impact-difference-in-differences-analysis" class="slide level2 center">
 <h2>CPZ Impact: Difference-in-Differences Analysis</h2>
 <p>Taking the coefficients from a difference-in-differences regression of visits on postXcounty, we can see that businesses in the metropolitan division saw more visits except in Manhattan and the Bronx, nearest the CPZ. Brooklyn in particular seems to have benefitted.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Timeline plot not found. Please run cpz_regression_analysis.R first.</code></pre>
-</div>
-</div>
-</section>
+
+<img data-src="output/county_did_coefficients_map_nyc.png" width="2400" class="r-stretch"></section>
 <section id="cpz-impact-difference-in-differences-analysis-1" class="slide level2 center">
 <h2>CPZ Impact: Difference-in-Differences Analysis</h2>
 <p>I run a standard pooled difference-in-difference regression of ln(visits) on Post-Treated with different fixed effects. There was a large decline in visits to businesses in the CPZ which is only partially explained by seasonality.</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>CPZ regression results not found. Please run cpz_regression_analysis.R first.</code></pre>
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true" style="font-size: 36px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: right;" data-quarto-table-cell-role="th">Coefficient</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Std. Error</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Fixed Effects</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">-0.2137</td>
+<td style="text-align: right;">0.0280</td>
+<td style="text-align: left;">NAICS + Date</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">-0.1837</td>
+<td style="text-align: right;">0.0334</td>
+<td style="text-align: left;">Sector + County Seasonality</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">-0.1839</td>
+<td style="text-align: right;">0.0336</td>
+<td style="text-align: left;">Sector-County Seasonality</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">-0.1863</td>
+<td style="text-align: right;">0.0379</td>
+<td style="text-align: left;">Sector-Tract + Tract Seasonality</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">-0.1863</td>
+<td style="text-align: right;">0.0379</td>
+<td style="text-align: left;">NAICS + Date + Tract Seasonality</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </section>
@@ -279,52 +308,62 @@ Daryl Larsen
 <h2>CPZ Impact: Spatial DiD with spillovers (Butt, 2024)</h2>
 <p>The previous analysis assumes that only businesses in the CPZ are affected by the congestion pricing. However, spillover effects are virtually guaranteed in any spatial setting. To account for this, I follow Butt (2024) and estimate the effects of congestion pricing within the CPZ as well as in increasingly large rings around the CPZ. Here, the negative effect on visits exists but, perhaps surprisingly, is largest just outside of the CPZ.</p>
 <div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>CPZ regression results not found. Please run cpz_regression_analysis.R first.</code></pre>
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true" style="font-size: 36px; width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ring</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Effect</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Std. Error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">CPZ (Inside)</td>
+<td style="text-align: right;">-0.0927</td>
+<td style="text-align: right;">0.0607</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ring 1 (0-5km)</td>
+<td style="text-align: right;">-0.2315</td>
+<td style="text-align: right;">0.0627</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ring 2 (5-15km)</td>
+<td style="text-align: right;">-0.1648</td>
+<td style="text-align: right;">0.0291</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ring 3 (15-30km)</td>
+<td style="text-align: right;">-0.0795</td>
+<td style="text-align: right;">0.0247</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </section>
 <section id="cpz-impact-ring-effects" class="slide level2 center">
 <h2>CPZ Impact: Ring Effects</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Ring effects plot not found. Please run cpz_regression_analysis.R first.</code></pre>
-</div>
-</div>
-</section>
+
+<img data-src="output/cpz_ring_effects.png" width="1800" class="r-stretch"></section>
 <section id="cpz-impact-treatment-effects-by-distance" class="slide level2 center">
 <h2>CPZ Impact: Treatment Effects by Distance</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Treatment effects plot not found. Please run cpz_regression_analysis.R first.</code></pre>
-</div>
-</div>
-</section>
+
+<img data-src="output/cpz_ring_treatment_effects.png" width="1800" class="r-stretch"></section>
 <section id="manhattan-spatial-rdd-year-over-year-changes" class="slide level2 center">
 <h2>Manhattan Spatial RDD: Year-over-Year Changes</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Manhattan RDD binscatter plot not found. Please run cpz_spatial_rdd_manhattan.R first.</code></pre>
-</div>
-</div>
-</section>
+
+<img data-src="output/manhattan_rdd_binscatter.png" width="1800" class="r-stretch"></section>
 <section id="manhattan-spatial-rdd-by-month" class="slide level2 center">
 <h2>Manhattan Spatial RDD: By Month</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Manhattan RDD month plot not found. Please run cpz_spatial_rdd_manhattan.R first.</code></pre>
-</div>
-</div>
-</section>
+
+<img data-src="output/manhattan_rdd_binscatter_by_month.png" width="2100" class="r-stretch"></section>
 <section id="manhattan-spatial-rdd" class="slide level2 center">
 <h2>Manhattan Spatial RDD</h2>
 <p>Negative effect felt most strongly near the 60th street boundary. - This is consistent with the idea that amenity benefit to pedestrians are felt most strongly well inside the zone - Perhaps negative amenity near the boundary from people trying to avoid the toll</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Manhattan RDD formal plot not found. Please run cpz_spatial_rdd_manhattan.R first.</code></pre>
-</div>
-</div>
-</section>
+
+<img data-src="output/manhattan_rdd_plot.png" width="1800" class="r-stretch"></section>
 <section id="next-steps" class="slide level2 center">
 <h2>Next Steps</h2>
 <ol type="1">
