@@ -1,0 +1,859 @@
+---
+title: "Proposal Defence"
+author: Daryl Larsen
+format:
+  revealjs:
+    slide-number: true
+    center: true
+    theme: solarized
+    transition: none
+    background-transition: fade
+    width: 1600
+    height: 900
+    fig-align: center
+    footer: "Proposal Defence"
+    reference-location: document
+    navigation-mode: linear
+    controls: true
+    progress: true
+    preview-links: true
+    touch: true
+    show-notes: true
+warning: false
+echo: false
+chalkboard: true
+---
+
+# Chapter 1: The Value of W
+
+## Motivation: Willingness to Pay for Prestige
+
+:::::::: columns
+:::::: {.column width="70%"}
+::::: {style="padding-right: 5%"}
+Luxury goods carry substantial price premiums.
+
+::: {.fragment .fade-in style="margin-top: 1em;"}
+How much of this premium is attributable to [prestige]{.highlight} rather than quality?
+:::
+
+::: {.fragment .fade-in style="margin-top: 1em;"}
+Difficult to answer because prestige and quality are typically highly correlated.
+:::
+:::::
+::::::
+
+::: {.column width="30%"}
+![](images/Color-Airbnb-Logo.jpg){.r-stretch style="margin-bottom: 100px;" fig-align="center" width="800"}
+:::
+::::::::
+
+## Prestigious Neighbourhoods
+
+:::::::: columns
+::::: {.column width="60%" style="margin-top: 1em;"}
+Certain neighbourhoods and cities carry more prestige and thus price premiums.
+
+::: {.fragment .fade-in style="margin-top: 1em;"}
+How much of this premium is attributable to [prestige]{.highlight} rather than quality?
+:::
+
+::: {.fragment .fade-in style="margin-top: 1em;"}
+Difficult to answer because prestige and quality are correlated.
+
+-   Access to jobs
+-   Amenities  
+-   School quality
+:::
+:::::
+
+:::: {.column width="40%"}
+::: {.r-stack .fragment .fade-in}
+![Beverly Hills](w_images/beverlyhills.png){width="100%"} ![NYC/NJ](w_images/nynj.jpg){width="100%"}
+:::
+::::
+::::::::
+
+## The Value of W: Vancouver's East-West Divide
+
+:::::: columns
+::::: {.column width="100%"}
+:::: {style="max-width: 90%; margin: 0 auto;"}
+We estimate the value associated with living on the [West]{style="color:#005EB8;font-weight:600;"} side of Vancouver using spatial RDD
+
+::: {.fragment .fade-in style="margin-top: 1.5em;"}
+<ul>
+<li>Vancouver's West side has historically been perceived as higher-status</li>
+<li>The East-West boundary follows Ontario Street - a small residential street</li>
+<li>Addresses provide a clear division (W vs E in street addresses)</li>
+<li>This East-West divide pattern exists in many cities globally</li>
+</ul>
+:::
+::::
+:::::
+::::::
+
+## East and West Vancouver
+
+```{r}
+#| label: load-w-data
+#| include: false
+
+# Note: This is a simplified version for the defense presentation
+# The full analysis requires database connection from the W project
+# For now, we'll reference the key findings and images from the W presentation
+
+# Key findings to highlight:
+# - 46.5% premium for single-family homes (entire west vs east)
+# - 19% premium from RDD (prestige effect alone)
+# - Smaller effects for strata/condo: 20% and 12.6%
+# - Effect stronger for homes with "W" in address
+```
+
+![East and West Vancouver divided by Ontario Street](w_presentation_files/figure-html/plot-van-map-1.png){fig-align="center"}
+
+## Ontario Street: The Clear Boundary
+
+![Ontario Street serves as the clear divide between East and West Vancouver](w_images/ontario24th.png){fig-align="center"}
+
+## Key Results: The Value of W
+
+::: incremental
+-   [**46.5% premium**]{style="color:#3498DB;font-weight:bold;"} for single-family homes in the entire west side compared to east side counterparts (controlling for lot size, floor area, and built year). The premium reflects both neighbourhood quality and prestige.
+
+-   [**19% premium**]{style="color:#3498DB;font-weight:bold;"} for single-family homes due to the RDD (i.e., prestige) effect alone.
+
+-   Strata/condo properties show [**smaller effects (20% and 12.6%)**]{style="color:#2ECC71;font-weight:bold;"}
+
+-   Effect is [**stronger for homes with W**]{style="color:#E74C3C;font-weight:bold;"} in their address
+:::
+
+## RDD within Census Tract
+
+::::: columns
+::: {.column width="45%"}
+RDD bandwidth: 300-meter (150m to each side)
+
+- Away from school catchment area borders and Main Street.
+
+CT (Census Tract) fixed effects
+
+- The treatment effect is identified by W and E variation within CT.
+:::
+
+::: {.column width="55%"}
+![Census tracts with 300m buffer around Ontario Street](w_presentation_files/figure-html/plot-ct-map-1.png){fig-align="center"}
+:::
+:::::
+
+## Summary Statistics
+
+![Summary statistics for properties near Ontario Street](w_presentation_files/figure-html/unnamed-chunk-7-1.png){fig-align="center"}
+
+## Baseline Regression Results
+
+![Main regression results showing West side premium](w_presentation_files/figure-html/unnamed-chunk-8-1.png){fig-align="center"}
+
+## Robustness: Effects Over Time
+
+![West side premium persists across decades (2000-2023)](w_presentation_files/figure-html/unnamed-chunk-14-1.png){fig-align="center"}
+
+## Robustness: Placebo Tests
+
+![Placebo tests: Ontario Street vs. other North-South streets](w_presentation_files/figure-html/run-placebo-tests-1.png){fig-align="center"}
+
+## Property Size Distributions
+
+![Property size distributions by East/West location](w_presentation_files/figure-html/plot-lotsize-distribution-1.png){fig-align="center"}
+
+## Historical Context: A Tale of Two Cities
+
+![Vancouver zoning map from 1931 showing industrial concentration](w_images/historicalzoning.jpg){.r-stretch style="max-width: 70%"}
+
+## Media Coverage: The East-West Divide
+
+::::: columns
+::: {.column width="50%"}
+![Vancouver Sun, June 15, 1921](w_images/sun_east_promote_1921_1.png){fig-align="center" width="100%"}
+:::
+
+::: {.column width="50%"}
+![Continued promotion of East Vancouver](w_images/sun_east_promote_1921_2.png){fig-align="center" width="100%"}
+:::
+:::::
+
+## Contemporary Recognition
+
+![Vancouver Sun, January 6, 2011](w_images/eastvan1.jpg){fig-align="center"}
+
+## Conclusion: The Value of W
+
+::: incremental
+-   We estimate significant willingness to pay for prestige associated with living in west Vancouver using spatial RDD.
+
+-   Our setting is ideal for spatial RDD because the boundary is well-defined and does not overlap with other major boundaries
+
+-   Prestige effect is economically large:
+    -   [**19% premium**]{style="color:#3498DB;font-weight:bold;"} for single-family homes due to prestige alone
+    -   Effect persistent over decades (2000-2023)
+    -   Robust to various specifications and placebo tests
+
+-   Implications for understanding housing markets and urban inequality:
+    -   Prestige can create persistent neighbourhood premiums
+    -   Address signals matter for property values
+    -   Spatial regression discontinuity provides clean identification of prestige effects
+:::
+
+::: notes
+This research demonstrates a significant and persistent willingness to pay for the prestige associated with a west side address in Vancouver. The 19% premium for single-family homes represents pure prestige value, separate from neighbourhood amenities or quality differences. This has important implications for understanding housing inequality and the role of social status in real estate markets.
+:::
+
+
+
+# Chapter 2: The Value of Geographic Diversification in Real Estate Investment
+
+## Motivation: REITs Face a Trade-off
+
+:::::::: columns
+::::: {.column width="50%"}
+**Empire State Realty Trust**
+![Concentrated in NYC](https://econdaryl.github.io/images/empire_state_map.png){width="100%"}
+:::::
+
+::::: {.column width="50%"}
+**Orion Office REIT**
+![Geographically dispersed](https://econdaryl.github.io/images/orion_map.png){width="100%"}
+:::::
+::::::::
+
+::: {.fragment .fade-in}
+**Research Question:** Is there a benefit to geographic spread in real estate portfolios? What is the channel through which costs and benefits operate?
+:::
+
+## The REIT Context
+
+Real Estate Investment Trusts (REITs):
+- Companies that own income-producing real estate (~$5 trillion in US assets)
+- Must pay out 90% of taxable income as dividends (50-75-90 rule)
+- Cannot hold cash like typical corporations
+
+::: {.fragment .fade-in style="margin-top: 1em;"}
+**Key Insight:** REITs face higher costs to holding cash, so they may look for other ways to protect against future cash flow risks, such as diversification
+:::
+
+## Geographic Diversification Trade-offs
+
+:::::: columns
+::::: {.column width="50%"}
+**Pros:**
+- Mitigate geographic risk (unemployment, income, rents determined locally)
+- Strong regional heterogeneity in recent recessions
+- Portfolio diversification benefits
+:::::
+
+::::: {.column width="50%"}
+**Cons:**
+- Inefficiencies in managing dispersed properties
+- Distant buyers pay premiums
+- Local investors earn better returns (fill vacancies faster)
+:::::
+::::::
+
+::: {.fragment .fade-in style="margin-top: 1em;"}
+**Literature consensus (pre-2000s):** Costs outweigh benefits for REITs
+:::
+
+## A Better Measure of Diversification
+
+**Problem with HHI:** $\text{HHI} = \sum_{j=1}^JP_j^2$
+- Treats all spatial units symmetrically
+- No control for property type agglomeration
+- Mixing spatial scales
+
+::: {.fragment .fade-in style="margin-top: 1em;"}
+**Solution:** Duranton-Overman (2005) approach
+1. Compute bilateral distances between all REIT properties
+2. Compare with counterfactual random portfolio of same size/type
+3. Generate localization ($\Gamma$) and dispersion ($\Psi$) indices
+:::
+
+## Example: Equity Residential
+
+EQR owns 293 multifamily properties in Boston, NYC, DC, Seattle, San Francisco, and Southern California
+
+![EQR Property Locations](https://econdaryl.github.io/images/eqr_map.png){fig-align="center" width="70%"}
+
+## Duranton-Overman vs HHI
+
+![Comparison of diversification measures](https://econdaryl.github.io/images/dur_over_hhi.png){fig-align="center" width="80%"}
+
+::: notes
+The Duranton-Overman index better captures the spatial strategy of REITs by accounting for distance within and between markets, controlling for firm size and property type agglomeration.
+:::
+
+## REITs Have Increased Geographic Spread
+
+| Year | Observations | MSA HHI | State HHI |
+|------|-------------|---------|-----------|
+| 2021 | 134 | 0.161 (0.236) | 0.219 (0.225) |
+| 2010 | 110 | - | 0.25 (0.24) |
+| 2000 | 114 | 0.271 (0.262) | - |
+
+::: {.fragment .fade-in}
+REITs have systematically reduced concentration over the past two decades
+:::
+
+## Key Results: Diversification Benefits
+
+:::::: columns
+::::: {.column width="50%"}
+**Stock Market Performance:**
+- Lower volatility (8 basis points)
+- Higher returns (-17 basis points)
+- Better COVID resilience
+
+**Operating Performance:**
+- Higher operating efficiency
+- Lower leverage
+- Less cash holdings
+:::::
+
+::::: {.column width="50%"}
+**Property Type Effects:**
+- Retail REITs most localized
+- Multifamily REITs most dispersed
+- Industrial showing diversification benefits
+
+**Robustness:**
+- Duranton-Overman outperforms HHI in explanatory power
+- Effects persistent across specifications
+:::::
+::::::
+
+## Operating Efficiency and Financial Channels
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+# Create a simplified results table based on the LaTeX content
+library(knitr)
+library(kableExtra)
+
+results_data <- data.frame(
+  Variable = c("Cash Holdings", "Leverage", "DSCR", "Operating Efficiency", "Operating Efficiency (with controls)"),
+  Coefficient = c(0.118, 0.00811, -0.0855, -0.000425, -0.000222),
+  Std_Error = c(0.0761, 0.00305, 0.0332, 0.000133, 0.0000926),
+  Interpretation = c("More diversified REITs hold less cash", 
+                    "Lower leverage ratios",
+                    "Lower debt service coverage", 
+                    "Higher operating efficiency",
+                    "Half of effect explained by cash/leverage")
+)
+
+kable(results_data,
+      format = "html",
+      digits = 4,
+      col.names = c("Dependent Variable", "Coefficient", "Std. Error", "Economic Interpretation")) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                font_size = 24,
+                full_width = FALSE)
+```
+
+## Conclusion: Geographic Diversification Creates Value
+
+::: incremental
+- Unlike previous literature, I find **net benefits** to geographic diversification for REITs using improved measures
+
+- **19% of diversification effect** on operating efficiency flows through cash flow stability and lower leverage
+
+- **Technology and market changes** since 2000s have shifted the cost-benefit balance:
+  - Better monitoring of distant properties
+  - Increased geographic heterogeneity in economic shocks
+  - Tighter lending conditions reward cash flow stability
+
+- **Policy implications:** REITs' legal structure creates incentives for efficient geographic diversification
+:::
+
+::: notes
+This research challenges the conventional wisdom that geographic diversification destroys value for REITs. Using more precise measures of diversification that account for spatial relationships, I find evidence that REITs have successfully adapted to changing market conditions by pursuing value-creating geographic spread strategies.
+:::
+
+# Chapter 3: Congestion Pricing and the local economy
+
+## Motivation
+
+> Implementing the planned congestion pricing system risks too many unintended consequences for New Yorkers at this time.
+>
+> --- <cite>Governor Kathy Hochul, June 5, 2024
+
+- Congestion pricing is a powerful tool for saving time and reducing pollution
+- But it likely involves fewer visits to an area, potentially harming businesses
+- Cordon pricing in particular can shape the economic geography of a city
+
+```{r}
+#| echo: false
+#| out.width: "20%"
+#| fig.align: "right"
+
+knitr::include_graphics("images/contax_protest.png")
+```
+## This paper
+1. I analyze the impact of congestion pricing on businesses in New York City
+    - Use a Spatial DiD approach to estimate the effect on visits
+    - Compare effects across location and types of businesses
+2. I analyze the impact of congestion pricing on residents of the New York City (planned)
+    - Use the network structure of the data to see how different types of residents are affected
+    - Identify winners and losers from congestion pricing
+3. I build a structural model of location choice to understand how congestion pricing affects the economic geography of New York City (planned)
+    - Use the model to simulate the effects of congestion pricing on resident and business location decisions
+    - Counterfactual designs to maximize welfare
+
+## Data
+
+- Advan monthly patterns
+    - Cell phone location data
+    - Monthly visit counts and origins of visitors to businesses in NYC
+    - Roughly 10\% sample of population ([Arancibia et al., 2024])
+    - Limit to businesses with at least 1 visit in each month
+
+- SafeGraph Places
+    - Business locations in NYC
+    - Includes name, geometry, and NAICS code
+
+## Data
+
+- SafeGraph Spend Patterns (Not used yet)
+    - Aggregated transaction data at each business
+    - Includes reported income and home location of customers at city level
+    - Unordered trip chains
+    - Repeat customers
+
+## Literature Review
+
+- Congestion pricing
+    - Theory: [Vickrey, 1969], [Arnott, de Palma, and Lindsey, 1990, 1991, 1993]
+    - Empirical: 
+        - London ([Glaister and Graham, 2002], [Leape, 2006], [Green et al., 2016] [Tang, 2016])
+        - Stockholm ([Eliasson et al., 2012], [Daunfeldt et al., 2009])
+        - Singapore ([Agarwal, Koo, and Sing, 2015])
+
+- Congestion pricing effect on businesses
+    - [Tang, 2021]^[JUE, not actually study of businesses but finds substantial increase in land values within the zone], [Agarwal et al., 2015]^[JUE, difference in difference, find 20\% drop in retail real estate prices], 
+    [Quddus et al., 2007]^[Transport Policy, Descriptive analysis of effect at one store, finds 5.5-8.2\% drop in sales], [Daunfeldt et al., 2009]^[Transportation Research Part A, 
+    difference-in-differences analysis of 14 shopping malls during the Stockholm congestion pricing trial, find no effect]
+
+- Spatial difference-in-differences
+    - [Butt, 2024]
+
+- My contribution: Analyze effect on businesses with more complete data and more robust methods than previous studies. Build structural model to show
+how congestion pricing affects business location decisions and the economic geography of New York City.
+
+## Background
+
+- Congestion pricing zone (CPZ) implemented January 5, 2025
+- Boundaries at 60th Street, FDR Drive and West Side Highway exempted
+- \$9 daytime, \$2.50 nighttime tolls for passenger vehicles, \$1.50 surcharge for rideshare, \$0.75 for taxis
+- Daytime pricing 5am-9pm weekdays, 9am-9pm weekends
+
+## CPZ Impact: Timeline Analysis
+
+January usually sees fewer visits, but 2025 seems to have been particularly bad for businesses in the CPZ.
+
+```{r}
+#| label: cpz-timeline
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 14
+#| fig-height: 8
+
+if(file.exists("output/cpz_visits_timeline.png")) {
+  knitr::include_graphics("output/cpz_visits_timeline.png")
+} else {
+  cat("Timeline plot not found. Please run cpz_regression_analysis.R first.")
+}
+```
+
+## CPZ Impact: Difference-in-Differences Analysis
+
+Taking the coefficients from a difference-in-differences regression of visits on postXcounty, we can see that businesses in the metropolitan division saw more visits except in
+Manhattan and the Bronx, nearest the CPZ. Brooklyn in particular seems to have benefitted.
+
+```{r}
+#| label: county-did-coefs
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 14
+#| fig-height: 8
+
+if(file.exists("output/county_did_coefficients_map_nyc.png")) {
+  knitr::include_graphics("output/county_did_coefficients_map_nyc.png")
+} else {
+  cat("Timeline plot not found. Please run cpz_regression_analysis.R first.")
+}
+```
+
+## CPZ Impact: Difference-in-Differences Analysis
+
+I run a standard pooled difference-in-difference regression of ln(visits) on Post-Treated with different fixed effects. There was a large
+decline in visits to businesses in the CPZ which is only partially explained by seasonality.
+
+```{r}
+#| label: cpz-regression-results
+#| echo: false
+#| message: false
+#| warning: false
+
+# Load required libraries
+library(dplyr)
+library(knitr)
+library(kableExtra)
+
+# Load results from CPZ regression analysis
+if(file.exists("output/cpz_regression_results.csv")) {
+  results <- read.csv("output/cpz_regression_results.csv")
+  
+  # Format the results table
+  results_formatted <- results %>%
+    mutate(
+      Coefficient = round(Coefficient, 4),
+      Std_Error = round(Std_Error, 4)
+    ) %>%
+    select(Coefficient, Std_Error, Fixed_Effects)
+  
+  # Create formatted table
+  kable(results_formatted, 
+        format = "html",
+        digits = 4,
+        col.names = c("Coefficient", "Std. Error", "Fixed Effects")) %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                  font_size = 36,
+                  full_width = FALSE)
+} else {
+  cat("CPZ regression results not found. Please run cpz_regression_analysis.R first.")
+}
+```
+
+## CPZ Impact: Spatial DiD with spillovers (Butt, 2024)
+
+The previous analysis assumes that only businesses in the CPZ are affected by the congestion pricing. However, spillover effects are virtually
+guaranteed in any spatial setting. To account for this, I follow Butt (2024) and estimate the effects of congestion pricing within the CPZ as
+well as in increasingly large rings around the CPZ. Here, the negative effect on visits exists but, perhaps surprisingly, is largest
+just outside of the CPZ.
+
+```{r}
+#| label: cpz-ring-results
+#| echo: false
+#| message: false
+#| warning: false
+
+# Load required libraries
+library(dplyr)
+library(knitr)
+library(kableExtra)
+
+# Load results from CPZ regression analysis
+if(file.exists("output/cpz_ring_effects_table.csv")) {
+  results <- read.csv("output/cpz_ring_effects_table.csv")
+  
+  # Format the results table
+  results_formatted <- results %>%
+    mutate(
+      Coefficient = round(Effect, 4),
+      Std_Error = round(Std_Error, 4)
+    ) %>%
+    filter(!is.na(Std_Error)) %>%
+    select(Ring, Coefficient, Std_Error)
+  
+  # Create formatted table
+  kable(results_formatted, 
+        format = "html",
+        digits = 4,
+        col.names = c("Ring", "Effect", "Std. Error")) %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                  font_size = 36,
+                  full_width = FALSE)
+} else {
+  cat("CPZ regression results not found. Please run cpz_regression_analysis.R first.")
+}
+```
+
+## CPZ Impact: Ring Effects
+
+```{r}
+#| label: cpz-ring-effects
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 14
+#| fig-height: 8
+
+if(file.exists("output/cpz_ring_effects.png")) {
+  knitr::include_graphics("output/cpz_ring_effects.png")
+} else {
+  cat("Ring effects plot not found. Please run cpz_regression_analysis.R first.")
+}
+```
+
+## CPZ Impact: Treatment Effects by Distance
+
+```{r}
+#| label: cpz-treatment-effects
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 14
+#| fig-height: 8
+
+if(file.exists("output/cpz_ring_treatment_effects.png")) {
+  knitr::include_graphics("output/cpz_ring_treatment_effects.png")
+} else {
+  cat("Treatment effects plot not found. Please run cpz_regression_analysis.R first.")
+}
+```
+
+## Manhattan Spatial RDD: Year-over-Year Changes
+
+```{r}
+#| label: manhattan-rdd-binscatter
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 14
+#| fig-height: 8
+
+if(file.exists("output/manhattan_rdd_binscatter.png")) {
+  knitr::include_graphics("output/manhattan_rdd_binscatter.png")
+} else {
+  cat("Manhattan RDD binscatter plot not found. Please run cpz_spatial_rdd_manhattan.R first.")
+}
+```
+
+## Manhattan Spatial RDD: By Month
+
+```{r}
+#| label: manhattan-rdd-month
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 16
+#| fig-height: 8
+
+if(file.exists("output/manhattan_rdd_binscatter_by_month.png")) {
+  knitr::include_graphics("output/manhattan_rdd_binscatter_by_month.png")
+} else {
+  cat("Manhattan RDD month plot not found. Please run cpz_spatial_rdd_manhattan.R first.")
+}
+```
+
+## Manhattan Spatial RDD
+Negative effect felt most strongly near the 60th street boundary.
+- This is consistent with the idea that amenity benefit to pedestrians are felt most strongly well inside the zone
+  - Perhaps negative amenity near the boundary from people trying to avoid the toll
+```{r}
+#| label: manhattan-rdd-formal
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-width: 14
+#| fig-height: 8
+
+if(file.exists("output/manhattan_rdd_plot.png")) {
+  knitr::include_graphics("output/manhattan_rdd_plot.png")
+} else {
+  cat("Manhattan RDD formal plot not found. Please run cpz_spatial_rdd_manhattan.R first.")
+}
+```
+
+## SafeGraph Spending Analysis: Revenue Effects
+
+Building on the visit analysis, I examine actual spending patterns using SafeGraph Spend data to understand the economic impact on businesses.
+
+```{r}
+#| label: sgspend-description
+#| echo: false
+#| message: false
+#| warning: false
+
+library(dplyr)
+library(knitr)
+library(kableExtra)
+
+# Create a summary of the SafeGraph Spend data structure
+sgspend_info <- data.frame(
+  Metric = c("Total observations", "Businesses inside CPZ", "Businesses outside CPZ", 
+             "Pre-treatment observations", "Post-treatment observations", "Panel structure"),
+  Value = c("224,688", "38,688 (17.2%)", "186,000 (82.8%)", 
+            "177,878 (79.2%)", "46,810 (20.8%)", "Balanced - 24 months per business")
+)
+
+kable(sgspend_info, 
+      format = "html",
+      col.names = c("Data Characteristic", "Value")) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                font_size = 32,
+                full_width = FALSE) %>%
+  add_header_above(c("SafeGraph Spending Data Overview" = 2))
+```
+
+## SafeGraph Spending: Difference-in-Differences Results
+
+Using transaction-level spending data, I find consistent evidence of negative effects on business revenue, with some heterogeneity across spending measures.
+
+```{r}
+#| label: sgspend-results-table
+#| echo: false
+#| message: false
+#| warning: false
+
+# Create results summary based on the analysis output
+sgspend_results <- data.frame(
+  Specification = c("Basic DiD (No FE)", "NAICS + Month FE", "Sector + County×Month FE", 
+                   "Sector×County×Month FE", "Sector×Tract + Tract×Month FE", "NAICS + Tract×Month + Date FE"),
+  Physical_Spend = c(-0.0521, -0.0521, -0.0406, -0.0401, -0.0384, -0.0384),
+  Std_Error_Spend = c(0.0197, 0.0197, 0.0152, 0.0152, 0.0183, 0.0183),
+  Physical_Transactions = c(-0.0563, -0.0563, -0.0435, -0.0432, -0.0442, -0.0442),
+  Std_Error_Trans = c(0.0197, 0.0197, 0.0152, 0.0152, 0.0183, 0.0183)
+)
+
+# Format for display
+sgspend_formatted <- sgspend_results %>%
+  mutate(
+    Physical_Spend_Display = paste0(sprintf("%.4f", Physical_Spend), " (", sprintf("%.4f", Std_Error_Spend), ")"),
+    Physical_Trans_Display = paste0(sprintf("%.4f", Physical_Transactions), " (", sprintf("%.4f", Std_Error_Trans), ")")
+  ) %>%
+  select(Specification, Physical_Spend_Display, Physical_Trans_Display)
+
+kable(sgspend_formatted, 
+      format = "html",
+      col.names = c("Fixed Effects", "Log Physical Spend", "Log Physical Transactions"),
+      caption = "Treatment Effects (Standard Errors in Parentheses)") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                font_size = 28,
+                full_width = FALSE) %>%
+  add_header_above(c(" " = 1, "Congestion Pricing Zone × Post Treatment" = 2))
+```
+
+## SafeGraph Spending: Key Findings
+
+**Physical Spending Effects:**
+- 3.8-5.2% decline in physical spending at CPZ businesses
+- Effects are robust across different fixed effect specifications
+- Smaller magnitude than visit effects, suggesting spending per visit may have increased
+
+**Physical Transactions Effects:**
+- 4.4-5.6% decline in physical transactions
+- Consistent with visit pattern results from Advan data
+- Validates findings using independent data source
+
+## SafeGraph Spending: Spatial Spillover Effects
+
+Following the same ring-based analysis as with visits, I examine how spending effects vary by distance from the CPZ boundary.
+
+```{r}
+#| label: sgspend-ring-results
+#| echo: false
+#| message: false
+#| warning: false
+
+# Create ring effects summary from the analysis
+ring_effects <- data.frame(
+  Ring = c("CPZ (Inside)", "Ring 1 (0-5km)", "Ring 2 (5-15km)", "Ring 3 (15-30km)", "Ring 4 (30-110km)"),
+  Businesses = c(1612, 1957, 2526, 1966, 1301),
+  Observations = c(38688, 46968, 60624, 47184, 31224),
+  Physical_Spend_Effect = c(-0.0178, 0.0243, 0.0675, 0.0662, 0.0000),
+  Spend_Std_Error = c(0.0152, 0.0195, 0.0257, 0.0196, 0.0000),
+  Physical_Trans_Effect = c(-0.0262, 0.0304, 0.0703, 0.0706, 0.0000),
+  Trans_Std_Error = c(0.0112, 0.0138, 0.0220, 0.0122, 0.0000),
+  Spend_Significant = c("", "", "*", "**", "Reference"),
+  Trans_Significant = c("*", ".", "**", "***", "Reference")
+)
+
+ring_display <- ring_effects %>%
+  mutate(
+    Physical_Spend_Display = ifelse(Ring == "Ring 4 (30-110km)", "Reference", 
+                                   paste0(sprintf("%.4f", Physical_Spend_Effect), 
+                                         " (", sprintf("%.4f", Spend_Std_Error), ") ", Spend_Significant)),
+    Physical_Trans_Display = ifelse(Ring == "Ring 4 (30-110km)", "Reference",
+                                   paste0(sprintf("%.4f", Physical_Trans_Effect), 
+                                         " (", sprintf("%.4f", Trans_Std_Error), ") ", Trans_Significant))
+  ) %>%
+  select(Ring, Businesses, Physical_Spend_Display, Physical_Trans_Display)
+
+kable(ring_display, 
+      format = "html",
+      col.names = c("Distance Ring", "N Businesses", "Physical Spend Effect", "Physical Transactions Effect"),
+      caption = "Spatial Spillover Effects by Distance Ring") %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                font_size = 26,
+                full_width = FALSE) %>%
+  footnote(general = "Standard errors in parentheses. Significance: *** p<0.001, ** p<0.01, * p<0.05, . p<0.1")
+```
+
+## SafeGraph Spending: Interpretation
+
+**Spatial Pattern of Effects:**
+
+1. **Inside CPZ**: Small negative effect on spending (-1.8%) vs larger effect on transactions (-2.6%)
+   - Suggests people visit less but may spend slightly more per visit
+   
+2. **Adjacent Areas (0-15km)**: Positive spillover effects
+   - Businesses just outside the zone benefit from diverted economic activity
+   - Ring 2 (5-15km) shows largest gains: +6.8% spending, +7.0% transactions
+
+3. **Economic Interpretation**:
+   - Net economic effect may be smaller than visit data alone suggests
+   - Spatial redistribution of economic activity rather than pure loss
+   - Some evidence for "quality over quantity" - fewer but potentially higher-value visits
+
+## Customer Demographics: Income and Repeat Patterns
+
+The SafeGraph data includes rich information about customer characteristics, allowing analysis of how different demographic groups respond to congestion pricing.
+
+```{r}
+#| label: customer-demographics
+#| echo: false
+#| message: false
+#| warning: false
+
+# Create summary of customer demographic analysis structure
+customer_info <- data.frame(
+  Variable = c("Repeat Customers", "Customer Income", "Mean Spend by Income", "Home City"),
+  Description = c("Visit frequency (1, 2, 3, 4, 5-10, >10 visits)", 
+                  "Income brackets (<$25k, $25-45k, $45-60k, $60-75k, $75-100k, $100-150k, >$150k)",
+                  "Average spending per customer by income bracket",
+                  "Customer home city (for geographic network analysis)"),
+  Format = c("Long format: placekey, date, variable, key, value", 
+             "Long format: placekey, date, variable, key, value",
+             "Long format: placekey, date, variable, key, value",
+             "Network format: placekey, date, home_city, customer_count, share")
+)
+
+kable(customer_info, 
+      format = "html",
+      col.names = c("Customer Metric", "Description", "Data Format")) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"),
+                font_size = 28,
+                full_width = FALSE) %>%
+  add_header_above(c("Available Customer Demographic Analysis" = 3))
+```
+
+## Next Steps: Enhanced Customer Analysis
+
+1. **Customer Demographics Analysis** ✓ *Data Prepared*
+   - Analyze how effects vary by customer income level
+   - Examine changes in repeat customer patterns
+   - Test hypothesis: Higher-income customers less price-sensitive
+
+2. **Geographic Customer Networks** ✓ *Data Prepared* 
+   - Map changes in customer origins (home cities)
+   - Identify which areas see largest changes in CPZ business patronage
+   - Network analysis of visitor flow changes
+
+3. **Business Heterogeneity Analysis**
+   - Effects by sector (restaurants, retail, services)
+   - Catchment area size and customer base characteristics
+   - Business adaptation strategies (delivery, pricing changes)
