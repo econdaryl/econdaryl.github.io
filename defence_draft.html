@@ -33,6 +33,8 @@
   <link href="defence_draft_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="defence_draft_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="defence_draft_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="defence_draft_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="defence_draft_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="defence_draft_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -140,11 +142,197 @@ Daryl Larsen
 </div>
 
 </section>
+<section>
 <section id="chapter-1-the-value-of-w" class="title-slide slide level1 center">
 <h1>Chapter 1: The Value of W</h1>
 
 </section>
+<section id="motivation-willingness-to-pay-for-prestige" class="slide level2 center">
+<h2>Motivation: Willingness to Pay for Prestige</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div style="padding-right: 5%">
+<p>Luxury goods carry substantial price premiums.</p>
+<div class="fragment fade-in" style="margin-top: 1em;">
+<p>How much of this premium is attributable to <span class="highlight">prestige</span> rather than quality?</p>
+</div>
+<div class="fragment fade-in" style="margin-top: 1em;">
+<p>Difficult to answer because prestige and quality are typically highly correlated.</p>
+</div>
+</div>
+</div><div class="column" style="width:30%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<img data-src="images/Color-Airbnb-Logo.jpg" class="r-stretch quarto-figure quarto-figure-center" style="margin-bottom: 100px;" width="800">
+</figure>
+</div>
+</div></div>
+</section>
+<section id="prestigious-neighbourhoods" class="slide level2 center">
+<h2>Prestigious Neighbourhoods</h2>
+<div class="columns">
+<div class="column" style="margin-top: 1em;">
+<p>Certain neighbourhoods and cities carry more prestige and thus price premiums.</p>
+<div class="fragment fade-in" style="margin-top: 1em;">
+<p>How much of this premium is attributable to <span class="highlight">prestige</span> rather than quality?</p>
+</div>
+<div class="fragment fade-in" style="margin-top: 1em;">
+<p>Difficult to answer because prestige and quality are correlated.</p>
+<ul>
+<li>Access to jobs</li>
+<li>Amenities<br>
+</li>
+<li>School quality</li>
+</ul>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="r-stack fragment fade-in">
+<p><img data-src="w_images/beverlyhills.png" style="width:100.0%" alt="Beverly Hills"> <img data-src="w_images/nynj.jpg" style="width:100.0%" alt="NYC/NJ"></p>
+</div>
+</div></div>
+</section>
+<section id="the-value-of-w-vancouvers-east-west-divide" class="slide level2 center">
+<h2>The Value of W: Vancouver’s East-West Divide</h2>
+<div class="columns">
+<div class="column" style="width:100%;">
+<div style="max-width: 90%; margin: 0 auto;">
+<p>We estimate the value associated with living on the <span style="color:#005EB8;font-weight:600;">West</span> side of Vancouver using spatial RDD</p>
+<div class="fragment fade-in" style="margin-top: 1.5em;">
+<ul>
+<li>
+Vancouver’s West side has historically been perceived as higher-status
+</li>
+<li>
+The East-West boundary follows Ontario Street - a small residential street
+</li>
+<li>
+Addresses provide a clear division (W vs E in street addresses)
+</li>
+<li>
+This East-West divide pattern exists in many cities globally
+</li>
+</ul>
+</div>
+</div>
+</div></div>
+</section>
+<section id="east-and-west-vancouver" class="slide level2 center">
+<h2>East and West Vancouver</h2>
 
+<img data-src="w_presentation_files/figure-html/plot-van-map-1.png" class="r-stretch quarto-figure-center"><p class="caption">East and West Vancouver divided by Ontario Street</p></section>
+<section id="ontario-street-the-clear-boundary" class="slide level2 center">
+<h2>Ontario Street: The Clear Boundary</h2>
+
+<img data-src="w_images/ontario24th.png" class="r-stretch quarto-figure-center"><p class="caption">Ontario Street serves as the clear divide between East and West Vancouver</p></section>
+<section id="key-results-the-value-of-w" class="slide level2 center">
+<h2>Key Results: The Value of W</h2>
+<ul>
+<li class="fragment"><p><span style="color:#3498DB;font-weight:bold;"><strong>46.5% premium</strong></span> for single-family homes in the entire west side compared to east side counterparts (controlling for lot size, floor area, and built year). The premium reflects both neighbourhood quality and prestige.</p></li>
+<li class="fragment"><p><span style="color:#3498DB;font-weight:bold;"><strong>19% premium</strong></span> for single-family homes due to the RDD (i.e., prestige) effect alone.</p></li>
+<li class="fragment"><p>Strata/condo properties show <span style="color:#2ECC71;font-weight:bold;"><strong>smaller effects (20% and 12.6%)</strong></span></p></li>
+<li class="fragment"><p>Effect is <span style="color:#E74C3C;font-weight:bold;"><strong>stronger for homes with W</strong></span> in their address</p></li>
+</ul>
+</section>
+<section id="rdd-within-census-tract" class="slide level2 center">
+<h2>RDD within Census Tract</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p>RDD bandwidth: 300-meter (150m to each side)</p>
+<ul>
+<li>Away from school catchment area borders and Main Street.</li>
+</ul>
+<p>CT (Census Tract) fixed effects</p>
+<ul>
+<li>The treatment effect is identified by W and E variation within CT.</li>
+</ul>
+</div><div class="column" style="width:55%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="w_presentation_files/figure-html/plot-ct-map-1.png"></p>
+<figcaption>Census tracts with 300m buffer around Ontario Street</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="summary-statistics" class="slide level2 center">
+<h2>Summary Statistics</h2>
+
+<img data-src="w_presentation_files/figure-html/unnamed-chunk-7-1.png" class="r-stretch quarto-figure-center"><p class="caption">Summary statistics for properties near Ontario Street</p></section>
+<section id="baseline-regression-results" class="slide level2 center">
+<h2>Baseline Regression Results</h2>
+
+<img data-src="w_presentation_files/figure-html/unnamed-chunk-8-1.png" class="r-stretch quarto-figure-center"><p class="caption">Main regression results showing West side premium</p></section>
+<section id="robustness-effects-over-time" class="slide level2 center">
+<h2>Robustness: Effects Over Time</h2>
+
+<img data-src="w_presentation_files/figure-html/unnamed-chunk-14-1.png" class="r-stretch quarto-figure-center"><p class="caption">West side premium persists across decades (2000-2023)</p></section>
+<section id="robustness-placebo-tests" class="slide level2 center">
+<h2>Robustness: Placebo Tests</h2>
+
+<img data-src="w_presentation_files/figure-html/run-placebo-tests-1.png" class="r-stretch quarto-figure-center"><p class="caption">Placebo tests: Ontario Street vs.&nbsp;other North-South streets</p></section>
+<section id="property-size-distributions" class="slide level2 center">
+<h2>Property Size Distributions</h2>
+
+<img data-src="w_presentation_files/figure-html/plot-lotsize-distribution-1.png" class="r-stretch quarto-figure-center"><p class="caption">Property size distributions by East/West location</p></section>
+<section id="historical-context-a-tale-of-two-cities" class="slide level2 center">
+<h2>Historical Context: A Tale of Two Cities</h2>
+
+<img data-src="w_images/historicalzoning.jpg" class="r-stretch quarto-figure-center"><p class="caption">Vancouver zoning map from 1931 showing industrial concentration</p></section>
+<section id="media-coverage-the-east-west-divide" class="slide level2 center">
+<h2>Media Coverage: The East-West Divide</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="w_images/sun_east_promote_1921_1.png" style="width:100.0%"></p>
+<figcaption>Vancouver Sun, June 15, 1921</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="w_images/sun_east_promote_1921_2.png" style="width:100.0%"></p>
+<figcaption>Continued promotion of East Vancouver</figcaption>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="contemporary-recognition" class="slide level2 center">
+<h2>Contemporary Recognition</h2>
+
+<img data-src="w_images/eastvan1.jpg" class="r-stretch quarto-figure-center"><p class="caption">Vancouver Sun, January 6, 2011</p></section>
+<section id="conclusion-the-value-of-w" class="slide level2 center">
+<h2>Conclusion: The Value of W</h2>
+<ul>
+<li class="fragment"><p>We estimate significant willingness to pay for prestige associated with living in west Vancouver using spatial RDD.</p></li>
+<li class="fragment"><p>Our setting is ideal for spatial RDD because the boundary is well-defined and does not overlap with other major boundaries</p></li>
+<li class="fragment"><p>Prestige effect is economically large:</p>
+<ul>
+<li class="fragment"><span style="color:#3498DB;font-weight:bold;"><strong>19% premium</strong></span> for single-family homes due to prestige alone</li>
+<li class="fragment">Effect persistent over decades (2000-2023)</li>
+<li class="fragment">Robust to various specifications and placebo tests</li>
+</ul></li>
+<li class="fragment"><p>Implications for understanding housing markets and urban inequality:</p>
+<ul>
+<li class="fragment">Prestige can create persistent neighbourhood premiums</li>
+<li class="fragment">Address signals matter for property values</li>
+<li class="fragment">Spatial regression discontinuity provides clean identification of prestige effects</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>This research demonstrates a significant and persistent willingness to pay for the prestige associated with a west side address in Vancouver. The 19% premium for single-family homes represents pure prestige value, separate from neighbourhood amenities or quality differences. This has important implications for understanding housing inequality and the role of social status in real estate markets.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
 <section id="chapter-2-which-is-more-important-for-cre-concentration-of-operations-or-geographic-diversification" class="title-slide slide level1 center">
 <h1>Chapter 2: Which is more important for CRE: concentration of operations, or geographic diversification</h1>
 
@@ -275,28 +463,28 @@ Daryl Larsen
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">-0.2137</td>
-<td style="text-align: right;">0.0280</td>
+<td style="text-align: right;">-0.2228</td>
+<td style="text-align: right;">0.0287</td>
 <td style="text-align: left;">NAICS + Date</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">-0.1837</td>
-<td style="text-align: right;">0.0334</td>
+<td style="text-align: right;">-0.1708</td>
+<td style="text-align: right;">0.0294</td>
 <td style="text-align: left;">Sector + County Seasonality</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">-0.1839</td>
-<td style="text-align: right;">0.0336</td>
+<td style="text-align: right;">-0.1702</td>
+<td style="text-align: right;">0.0297</td>
 <td style="text-align: left;">Sector-County Seasonality</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">-0.1863</td>
-<td style="text-align: right;">0.0379</td>
+<td style="text-align: right;">-0.1631</td>
+<td style="text-align: right;">0.0346</td>
 <td style="text-align: left;">Sector-Tract + Tract Seasonality</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">-0.1863</td>
-<td style="text-align: right;">0.0379</td>
+<td style="text-align: right;">-0.1631</td>
+<td style="text-align: right;">0.0346</td>
 <td style="text-align: left;">NAICS + Date + Tract Seasonality</td>
 </tr>
 </tbody>
@@ -320,23 +508,23 @@ Daryl Larsen
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">CPZ (Inside)</td>
-<td style="text-align: right;">-0.0927</td>
-<td style="text-align: right;">0.0607</td>
+<td style="text-align: right;">-0.0775</td>
+<td style="text-align: right;">0.0508</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Ring 1 (0-5km)</td>
-<td style="text-align: right;">-0.2315</td>
-<td style="text-align: right;">0.0627</td>
+<td style="text-align: right;">-0.2164</td>
+<td style="text-align: right;">0.0530</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Ring 2 (5-15km)</td>
-<td style="text-align: right;">-0.1648</td>
-<td style="text-align: right;">0.0291</td>
+<td style="text-align: right;">-0.1578</td>
+<td style="text-align: right;">0.0270</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Ring 3 (15-30km)</td>
-<td style="text-align: right;">-0.0795</td>
-<td style="text-align: right;">0.0247</td>
+<td style="text-align: right;">-0.0787</td>
+<td style="text-align: right;">0.0260</td>
 </tr>
 </tbody>
 </table>
@@ -364,28 +552,280 @@ Daryl Larsen
 <p>Negative effect felt most strongly near the 60th street boundary. - This is consistent with the idea that amenity benefit to pedestrians are felt most strongly well inside the zone - Perhaps negative amenity near the boundary from people trying to avoid the toll</p>
 
 <img data-src="output/manhattan_rdd_plot.png" width="1800" class="r-stretch"></section>
-<section id="next-steps" class="slide level2 center">
-<h2>Next Steps</h2>
+<section id="safegraph-spending-analysis-revenue-effects" class="slide level2 center">
+<h2>SafeGraph Spending Analysis: Revenue Effects</h2>
+<p>Building on the visit analysis, I examine actual spending patterns using SafeGraph Spend data to understand the economic impact on businesses.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true" style="font-size: 32px; width: auto !important; margin-left: auto; margin-right: auto;">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+SafeGraph Spending Data Overview
+</div></th>
+</tr>
+<tr class="even">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Data Characteristic</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Total observations</td>
+<td style="text-align: left;">224,688</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Businesses inside CPZ</td>
+<td style="text-align: left;">38,688 (17.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Businesses outside CPZ</td>
+<td style="text-align: left;">186,000 (82.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pre-treatment observations</td>
+<td style="text-align: left;">177,878 (79.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Post-treatment observations</td>
+<td style="text-align: left;">46,810 (20.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Panel structure</td>
+<td style="text-align: left;">Balanced - 24 months per business</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="safegraph-spending-difference-in-differences-results" class="slide level2 center">
+<h2>SafeGraph Spending: Difference-in-Differences Results</h2>
+<p>Using transaction-level spending data, I find consistent evidence of negative effects on business revenue, with some heterogeneity across spending measures.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true" style="font-size: 28px; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>Treatment Effects (Standard Errors in Parentheses)</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th" style="text-align: left; empty-cells: hide; border-bottom: hidden;"></th>
+<th colspan="2" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Congestion Pricing Zone × Post Treatment
+</div></th>
+</tr>
+<tr class="even">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Fixed Effects</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Log Physical Spend</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Log Physical Transactions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Basic DiD (No FE)</td>
+<td style="text-align: left;">-0.0521 (0.0197)</td>
+<td style="text-align: left;">-0.0563 (0.0197)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NAICS + Month FE</td>
+<td style="text-align: left;">-0.0521 (0.0197)</td>
+<td style="text-align: left;">-0.0563 (0.0197)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sector + County×Month FE</td>
+<td style="text-align: left;">-0.0406 (0.0152)</td>
+<td style="text-align: left;">-0.0435 (0.0152)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sector×County×Month FE</td>
+<td style="text-align: left;">-0.0401 (0.0152)</td>
+<td style="text-align: left;">-0.0432 (0.0152)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sector×Tract + Tract×Month FE</td>
+<td style="text-align: left;">-0.0384 (0.0183)</td>
+<td style="text-align: left;">-0.0442 (0.0183)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NAICS + Tract×Month + Date FE</td>
+<td style="text-align: left;">-0.0384 (0.0183)</td>
+<td style="text-align: left;">-0.0442 (0.0183)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="safegraph-spending-key-findings" class="slide level2 center">
+<h2>SafeGraph Spending: Key Findings</h2>
+<p><strong>Physical Spending Effects:</strong> - 3.8-5.2% decline in physical spending at CPZ businesses - Effects are robust across different fixed effect specifications - Smaller magnitude than visit effects, suggesting spending per visit may have increased</p>
+<p><strong>Physical Transactions Effects:</strong> - 4.4-5.6% decline in physical transactions - Consistent with visit pattern results from Advan data - Validates findings using independent data source</p>
+</section>
+<section id="safegraph-spending-spatial-spillover-effects" class="slide level2 center">
+<h2>SafeGraph Spending: Spatial Spillover Effects</h2>
+<p>Following the same ring-based analysis as with visits, I examine how spending effects vary by distance from the CPZ boundary.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true" style="font-size: 26px; width: auto !important; margin-left: auto; margin-right: auto;border-bottom: 0;">
+<caption>Spatial Spillover Effects by Distance Ring</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Distance Ring</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">N Businesses</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Physical Spend Effect</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Physical Transactions Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">CPZ (Inside)</td>
+<td style="text-align: right;">1612</td>
+<td style="text-align: left;">-0.0178 (0.0152)</td>
+<td style="text-align: left;">-0.0262 (0.0112) *</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ring 1 (0-5km)</td>
+<td style="text-align: right;">1957</td>
+<td style="text-align: left;">0.0243 (0.0195)</td>
+<td style="text-align: left;">0.0304 (0.0138) .</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ring 2 (5-15km)</td>
+<td style="text-align: right;">2526</td>
+<td style="text-align: left;">0.0675 (0.0257) *</td>
+<td style="text-align: left;">0.0703 (0.0220) **</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ring 3 (15-30km)</td>
+<td style="text-align: right;">1966</td>
+<td style="text-align: left;">0.0662 (0.0196) **</td>
+<td style="text-align: left;">0.0706 (0.0122) ***</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Ring 4 (30-110km)</td>
+<td style="text-align: right;">1301</td>
+<td style="text-align: left;">Reference</td>
+<td style="text-align: left;">Reference</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td style="text-align: left; padding: 0;"><span style="font-style: italic;">Note: </span></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding: 0;"><sup></sup> Standard errors in parentheses. Significance: *** p&lt;0.001, ** p&lt;0.01, * p&lt;0.05, . p&lt;0.1</td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+</div>
+</section>
+<section id="safegraph-spending-interpretation" class="slide level2 center">
+<h2>SafeGraph Spending: Interpretation</h2>
+<p><strong>Spatial Pattern of Effects:</strong></p>
 <ol type="1">
-<li>Add analysis on revenue from SafeGraph Spend Patterns data</li>
-</ol>
+<li><strong>Inside CPZ</strong>: Small negative effect on spending (-1.8%) vs larger effect on transactions (-2.6%)
 <ul>
-<li>Can see by income, by home city, etc.</li>
-<li>Hypothesis: I visit the city less but spend more when I do because it’s a nicer place to walk around in</li>
-<li>Delivery date: July 24</li>
-</ul>
-<ol start="2" type="1">
-<li>Study how effects vary for business type, catchment area size, etc.</li>
-</ol>
+<li>Suggests people visit less but may spend slightly more per visit</li>
+</ul></li>
+<li><strong>Adjacent Areas (0-15km)</strong>: Positive spillover effects
 <ul>
-<li>Delivery date: July 24</li>
-</ul>
-<ol start="3" type="1">
-<li>Generate graphs to see how visit network changed</li>
-</ol>
+<li>Businesses just outside the zone benefit from diverted economic activity</li>
+<li>Ring 2 (5-15km) shows largest gains: +6.8% spending, +7.0% transactions</li>
+</ul></li>
+<li><strong>Economic Interpretation</strong>:
 <ul>
-<li>Delivery date: July 22</li>
-</ul>
+<li>Net economic effect may be smaller than visit data alone suggests</li>
+<li>Spatial redistribution of economic activity rather than pure loss</li>
+<li>Some evidence for “quality over quantity” - fewer but potentially higher-value visits</li>
+</ul></li>
+</ol>
+</section>
+<section id="customer-demographics-income-and-repeat-patterns" class="slide level2 center">
+<h2>Customer Demographics: Income and Repeat Patterns</h2>
+<p>The SafeGraph data includes rich information about customer characteristics, allowing analysis of how different demographic groups respond to congestion pricing.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped table-hover table-condensed caption-top" data-quarto-postprocess="true" style="font-size: 28px; width: auto !important; margin-left: auto; margin-right: auto;">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="3" data-quarto-table-cell-role="th" style="text-align: center; border-bottom: hidden; padding-bottom: 0; padding-left: 3px; padding-right: 3px;"><div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Available Customer Demographic Analysis
+</div></th>
+</tr>
+<tr class="even">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Customer Metric</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Description</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Data Format</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Repeat Customers</td>
+<td style="text-align: left;">Visit frequency (1, 2, 3, 4, 5-10, &gt;10 visits)</td>
+<td style="text-align: left;">Long format: placekey, date, variable, key, value</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Customer Income</td>
+<td style="text-align: left;">Income brackets (&lt;$25k, $25-45k, $45-60k, $60-75k, $75-100k, $100-150k, &gt;$150k)</td>
+<td style="text-align: left;">Long format: placekey, date, variable, key, value</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mean Spend by Income</td>
+<td style="text-align: left;">Average spending per customer by income bracket</td>
+<td style="text-align: left;">Long format: placekey, date, variable, key, value</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Home City</td>
+<td style="text-align: left;">Customer home city (for geographic network analysis)</td>
+<td style="text-align: left;">Network format: placekey, date, home_city, customer_count, share</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="next-steps-enhanced-customer-analysis" class="slide level2 center">
+<h2>Next Steps: Enhanced Customer Analysis</h2>
+<ol type="1">
+<li><strong>Customer Demographics Analysis</strong> ✓ <em>Data Prepared</em>
+<ul>
+<li>Analyze how effects vary by customer income level</li>
+<li>Examine changes in repeat customer patterns</li>
+<li>Test hypothesis: Higher-income customers less price-sensitive</li>
+</ul></li>
+<li><strong>Geographic Customer Networks</strong> ✓ <em>Data Prepared</em>
+<ul>
+<li>Map changes in customer origins (home cities)</li>
+<li>Identify which areas see largest changes in CPZ business patronage</li>
+<li>Network analysis of visitor flow changes</li>
+</ul></li>
+<li><strong>Business Heterogeneity Analysis</strong>
+<ul>
+<li>Effects by sector (restaurants, retail, services)</li>
+<li>Catchment area size and customer base characteristics</li>
+<li>Business adaptation strategies (delivery, pricing changes)</li>
+</ul></li>
+</ol>
 
 </section></section>
 <section id="footnotes" class="footnotes footnotes-end-of-document smaller scrollable" role="doc-endnotes"><h2>Footnotes</h2>
@@ -411,6 +851,7 @@ Daryl Larsen
   <script src="defence_draft_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="defence_draft_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="defence_draft_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="defence_draft_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="defence_draft_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -432,7 +873,8 @@ Daryl Larsen
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -603,7 +1045,7 @@ Daryl Larsen
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
