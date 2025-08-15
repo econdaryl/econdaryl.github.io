@@ -1,0 +1,172 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="cityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34495e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="suburbGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#27ae60;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#2ecc71;stop-opacity:0.2" />
+    </linearGradient>
+    <radialGradient id="banGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#e74c3c;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#c0392b;stop-opacity:0.4" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+    <marker id="dollarArrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="#ecf0f1"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">
+    Spatial Spillover Effects of Central City Airbnb Bans
+  </text>
+  
+  <!-- CBD Circle -->
+  <circle cx="400" cy="300" r="120" fill="url(#cityGradient)" filter="url(#shadow)"/>
+  <circle cx="400" cy="300" r="120" fill="url(#banGradient)"/>
+  
+  <!-- CBD Buildings -->
+  <rect x="370" y="250" width="15" height="60" fill="#34495e"/>
+  <rect x="390" y="240" width="15" height="70" fill="#2c3e50"/>
+  <rect x="410" y="235" width="15" height="75" fill="#34495e"/>
+  <rect x="430" y="245" width="15" height="65" fill="#2c3e50"/>
+  
+
+  
+  <!-- CBD Label -->
+  <text x="400" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+    Central Business District
+  </text>
+  <text x="400" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white">
+    (Tourism attractions, restaurants, jobs)
+  </text>
+  
+  <!-- Suburban Ring -->
+  <circle cx="400" cy="300" r="220" fill="url(#suburbGradient)" filter="url(#shadow)"/>
+  
+  <!-- Suburban Houses distributed around the ring -->
+  <!-- North -->
+  <rect x="385" y="120" width="12" height="12" fill="#27ae60"/>
+  <polygon points="385,120 391,110 397,120" fill="#e74c3c"/>
+  <rect x="405" y="115" width="12" height="12" fill="#27ae60"/>
+  <polygon points="405,115 411,105 417,115" fill="#e74c3c"/>
+  
+  <!-- Northeast -->
+  <rect x="520" y="160" width="12" height="12" fill="#27ae60"/>
+  <polygon points="520,160 526,150 532,160" fill="#e74c3c"/>
+  <rect x="540" y="165" width="12" height="12" fill="#27ae60"/>
+  <polygon points="540,165 546,155 552,165" fill="#e74c3c"/>
+  
+  <!-- East -->
+  <rect x="560" y="290" width="12" height="12" fill="#27ae60"/>
+  <polygon points="560,290 566,280 572,290" fill="#e74c3c"/>
+  <rect x="575" y="310" width="12" height="12" fill="#27ae60"/>
+  <polygon points="575,310 581,300 587,310" fill="#e74c3c"/>
+  
+  <!-- Southeast -->
+  <rect x="520" y="430" width="12" height="12" fill="#27ae60"/>
+  <polygon points="520,430 526,420 532,430" fill="#e74c3c"/>
+  <rect x="540" y="445" width="12" height="12" fill="#27ae60"/>
+  <polygon points="540,445 546,435 552,445" fill="#e74c3c"/>
+  
+  <!-- South -->
+  <rect x="385" y="480" width="12" height="12" fill="#27ae60"/>
+  <polygon points="385,480 391,470 397,480" fill="#e74c3c"/>
+  <rect x="405" y="475" width="12" height="12" fill="#27ae60"/>
+  <polygon points="405,475 411,465 417,475" fill="#e74c3c"/>
+  
+  <!-- Southwest -->
+  <rect x="260" y="430" width="12" height="12" fill="#27ae60"/>
+  <polygon points="260,430 266,420 272,430" fill="#e74c3c"/>
+  <rect x="280" y="445" width="12" height="12" fill="#27ae60"/>
+  <polygon points="280,445 286,435 292,445" fill="#e74c3c"/>
+  
+  <!-- West -->
+  <rect x="220" y="290" width="12" height="12" fill="#27ae60"/>
+  <polygon points="220,290 226,280 232,290" fill="#e74c3c"/>
+  <rect x="205" y="310" width="12" height="12" fill="#27ae60"/>
+  <polygon points="205,310 211,300 217,310" fill="#e74c3c"/>
+  
+  <!-- Northwest -->
+  <rect x="260" y="160" width="12" height="12" fill="#27ae60"/>
+  <polygon points="260,160 266,150 272,160" fill="#e74c3c"/>
+  <rect x="280" y="165" width="12" height="12" fill="#27ae60"/>
+  <polygon points="280,165 286,155 292,165" fill="#e74c3c"/>
+  
+  <!-- Airbnb Icons distributed around the ring -->
+  <text x="391" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e74c3c">📶</text>
+  <text x="526" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e74c3c">📶</text>
+  <text x="590" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e74c3c">📶</text>
+  <text x="526" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e74c3c">📶</text>
+  <text x="391" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e74c3c">📶</text>
+  <text x="266" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e74c3c">📶</text>
+  <text x="210" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e74c3c">📶</text>
+  <text x="266" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#e74c3c">📶</text>
+  
+
+  
+  <!-- Arrows showing tourism dollars flowing to periphery (reduced set) -->
+  <path d="M 360 260 Q 320 200 280 160" stroke="#27ae60" stroke-width="4" fill="none" marker-end="url(#dollarArrow)"/>
+  <path d="M 440 260 Q 480 200 520 160" stroke="#27ae60" stroke-width="4" fill="none" marker-end="url(#dollarArrow)"/>
+  <path d="M 360 320 Q 320 380 280 420" stroke="#27ae60" stroke-width="4" fill="none" marker-end="url(#dollarArrow)"/>
+  <path d="M 440 320 Q 480 380 520 420" stroke="#27ae60" stroke-width="4" fill="none" marker-end="url(#dollarArrow)"/>
+  
+  <!-- Dollar signs along the arrows -->
+  <text x="330" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#27ae60" font-weight="bold">$</text>
+  <text x="470" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#27ae60" font-weight="bold">$</text>
+  <text x="330" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#27ae60" font-weight="bold">$</text>
+  <text x="470" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#27ae60" font-weight="bold">$</text>
+  
+
+  
+
+  
+  <!-- Car traffic in suburban ring only -->
+  <!-- Cars in suburban ring -->
+  <text x="300" y="180" font-size="14">🚗</text>
+  <text x="500" y="175" font-size="14">🚗</text>
+  <text x="550" y="280" font-size="14">🚗</text>
+  <text x="500" y="420" font-size="14">🚗</text>
+  <text x="300" y="420" font-size="14">🚗</text>
+  <text x="250" y="280" font-size="14">🚗</text>
+  <text x="320" y="240" font-size="14">🚗</text>
+  <text x="480" y="360" font-size="14">🚗</text>
+  <text x="320" y="360" font-size="14">🚗</text>
+  <text x="480" y="240" font-size="14">🚗</text>
+  
+  <!-- Additional scattered cars -->
+  <text x="270" y="210" font-size="14">🚗</text>
+  <text x="530" y="210" font-size="14">🚗</text>
+  <text x="570" y="350" font-size="14">🚗</text>
+  <text x="230" y="350" font-size="14">🚗</text>
+  <text x="370" y="460" font-size="14">🚗</text>
+  <text x="430" y="140" font-size="14">🚗</text>
+  
+  <!-- Unintended Consequences Box -->
+  <rect x="50" y="500" width="700" height="80" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="2" rx="10"/>
+  <text x="400" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#e74c3c">
+    Unintended Consequences
+  </text>
+  <text x="400" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+    🌍 Increased VMT &amp; Emissions  •  💰 Reduced CBD Economic Activity  •  ⚖️ Spatial Mismatch Inefficiency
+  </text>
+  <text x="400" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50">
+    🚌 Modal Shift from Transit to Cars  •  🏙️ Loss of Agglomeration Benefits
+  </text>
+  
+
+</svg>
