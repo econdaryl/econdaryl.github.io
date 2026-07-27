@@ -46,5 +46,8 @@
 	},
 	"repository": {
 		"type": "git"
+	},
+	"overrides": {
+		"sharp": "0.32.6"
 	}
 }
