@@ -186,17 +186,17 @@ class IndexPage extends React.Component {
                 
                 <div
                     className="wall"
-                    style={{ height: this.state.winHeight + "px", }}
+                    style={{ height: "auto", minHeight: "600px", paddingTop: "80px", paddingBottom: "80px" }}
                 >
                     <Particles className="particles" params={particlesOptions}></Particles>
                     <div className="intro container" style={{zIndex: 1}}>
                         {/* particles!!! */}
-                        
+
                         <div className="main-title text-primary" style={{backgroundColor: "#ffffff00"}}>
-                        
+
                             <svg
                                 width="90%"
-                                height="220px"
+                                height="120px"
                                 viewBox="0 0 100 100"
                                 preserveAspectRatio="xMidYMid slice"
                                 ref={c => (this.svg = c)}
@@ -239,7 +239,20 @@ class IndexPage extends React.Component {
                                               .title}
                                 </text>
                             </svg>
-                            
+
+                        </div>
+                        <div style={{ margin: "30px 0" }}>
+                            <img
+                                src="/images/headshot.png"
+                                alt="Daryl Larsen"
+                                style={{
+                                    width: "200px",
+                                    height: "200px",
+                                    borderRadius: "50%",
+                                    objectFit: "cover",
+                                    border: "3px solid #357793"
+                                }}
+                            />
                         </div>
                         <p className="tag-line text-secondary">
                             {this.props.data.site.siteMetadata.introTag}
