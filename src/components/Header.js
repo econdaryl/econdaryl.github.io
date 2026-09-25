@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { useState } from "react"
 
 export default function Header() {
@@ -16,10 +16,10 @@ export default function Header() {
         <span></span>
       </button>
       <nav className={isActive ? "menu-items is-open" : "menu-items"} aria-label="Primary navigation">
-        <NavLink to='/' onClick={() => setActive(false)}>Home</NavLink>
-        <NavLink to='/About' onClick={() => setActive(false)}>About Me</NavLink>
-        <NavLink to='/Research' onClick={() => setActive(false)}>Research</NavLink>
-        <NavLink to='/CV' onClick={() => setActive(false)}>CV</NavLink>
+        <a href='/#intro' onClick={() => setActive(false)}>Home</a>
+        <a href='/#research' onClick={() => setActive(false)}>Research</a>
+        <a href='/#teaching' onClick={() => setActive(false)}>Teaching</a>
+        <Link to='/CV' onClick={() => setActive(false)}>CV</Link>
       </nav>
     </header>
   )

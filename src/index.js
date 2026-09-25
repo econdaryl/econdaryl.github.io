@@ -4,20 +4,18 @@ import './index.css';
 import App from './App';
 import NotFound from './components/NotFound';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
-import About from './components/About';
 import CV from './components/CV';
-import Research from './components/Research';
 
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<Home />} />
-        <Route path="About" element={<About />} />
         <Route path="CV" element={<CV />} />
-        <Route path='Research' element={<Research />} />
+        <Route path="About" element={<Navigate to="/" replace />} />
+        <Route path="Research" element={<Navigate to="/#research" replace />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

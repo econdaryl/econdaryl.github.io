@@ -1,9 +1,10 @@
 export default function Research() {
   return(
-    <main className="research page-shell">
-      <div className="page-heading">
+    <section className="research section-shell content-section" id="research">
+      <h2 className="section-title">Research</h2>
+      <div className="paper-heading">
         <p className="eyebrow">Working paper</p>
-        <h1>The Value of W</h1>
+        <h3>The Value of W</h3>
         <p className="research-subtitle">Pricing Neighbourhood Prestige</p>
         <p>With Sanghoon Lee and Seung Hoon Lee</p>
         <p className="paper-status">Revise and Resubmit, <em>Journal of Urban Economics</em></p>
@@ -69,6 +70,6 @@ export default function Research() {
           </p>
         </section>
       </article>
-    </main>
+    </section>
   )
 }
