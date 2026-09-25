@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - source
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -18,16 +19,18 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '20.18.1'
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm ci --legacy-peer-deps
 
       - name: Build
         run: npm run build
         env:
-          NODE_OPTIONS: --max-old-space-size=4096
+          CI: true
+          GATSBY_TELEMETRY_DISABLED: 1
+          NODE_OPTIONS: --max-old-space-size=4096 --openssl-legacy-provider
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
