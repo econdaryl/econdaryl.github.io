@@ -1,15 +1,12 @@
 export default function Home() {
   return(
-    <div className="home">
-      <img src="logo-transparent" alt='econdaryl logo' />
+    <main className="home page-shell">
+      <img src="/logo-transparent" alt='Daryl Larsen bridge logo' className="home-logo" />
+      <h1>Daryl Larsen</h1>
       <h2>University of British Columbia</h2>
-      <h3>Sauder School of Business</h3>
-      <h3>PhD Urban Land Economics</h3>
-      <h3>
-        Interests: urban econ, housing, real estate, and migration 
-      </h3>
-      <img src="headshot.png" alt='headshot' className="headshot"/>
-
-    </div>
+      <p className="home-role">PhD Candidate · Urban Land Economics · Sauder School of Business</p>
+      <p className="home-interests">I study urban, migration, and labor economics.</p>
+      <img src="/headshot.png" alt='Daryl Larsen' className="headshot"/>
+    </main>
   )
 }

@@ -1,11 +1,17 @@
 export default function CV() {
   return(
-    <div className="cv">
-      <h2>Curriculum Vitae</h2>
-      <div className="cvItems">
-        <button><a href='../../CV.pdf' download>Download</a></button>
-        <iframe src='../../CV.pdf' width="60%" height="1000px"></iframe>
+    <main className="cv page-shell">
+      <div className="page-heading">
+        <p className="eyebrow">Curriculum Vitae</p>
+        <h1>CV</h1>
+        <p>Updated July 2026</p>
       </div>
-    </div>
+      <div className="cvItems">
+        <a className="button-link" href='/Daryl-Larsen-CV-2026.pdf' download>
+          Download CV (PDF)
+        </a>
+        <iframe src='/Daryl-Larsen-CV-2026.pdf' title="Daryl Larsen curriculum vitae"></iframe>
+      </div>
+    </main>
   )
 }
