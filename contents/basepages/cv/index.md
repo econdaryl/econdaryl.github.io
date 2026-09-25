@@ -3,7 +3,7 @@ title: CV
 template: basepage
 ---
 
-You can download my CV here: [CV (PDF)](./cv.pdf)
+**Updated July 2026.** [Download my current CV (PDF)](./daryl-larsen-cv-2026.pdf)
 
 ### Education
 

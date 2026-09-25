@@ -30,7 +30,7 @@ class Navbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            navbarPlaceholderHeight: 100,
+            navbarPlaceholderHeight: 60,
             sidebarOpen: false
         };
 

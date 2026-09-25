@@ -16,9 +16,9 @@ export default function({ data }) {
             "November",
             "December"
         ],
-        date = d.getDate(),
-        month = d.getMonth(),
-        year = d.getFullYear();
+        date = d.getUTCDate(),
+        month = d.getUTCMonth(),
+        year = d.getUTCFullYear();
     return (
         <span>
             {date} {months[month]} {year}

@@ -1,36 +1,41 @@
 ---
-title: The Value of W - Pricing Neighbourhood Prestige
-date: 2025-06-01
+title: "The Value of W: Pricing Neighbourhood Prestige"
+date: 2026-05-18
 template: blog
 image: ./placebo.png
-banner: ./placebo.png
-description: With Sanghoon Lee and Seung Hoon Lee. Revise and Resubmit, Journal of Urban Economics. How much do homebuyers pay for a prestigious address?
+description: With Sanghoon Lee and Seung Hoon Lee. How much will buyers pay for the prestige of a West Side address in Vancouver?
 ---
 
-## With Sanghoon Lee and Seung Hoon Lee
-**Revise and Resubmit, Journal of Urban Economics**
+**With Sanghoon Lee and Seung Hoon Lee**<br>
+*Revise and Resubmit, Journal of Urban Economics*
 
-### Plain Language Summary
+[Read the paper (PDF)](./value-of-w.pdf)
 
-How much is a prestigious address worth? While we know that neighborhood characteristics like schools and amenities affect home prices, this paper asks a different question: do people pay a premium simply to live on a street with a prestigious name or location, even after controlling for all other neighborhood qualities?
+## The question
 
-We study this question in Vancouver, where Ontario Street serves as a prominent east-west boundary in the city. Using detailed housing transaction data, we compare homes that are nearly identical in all respects - they're the same distance from downtown, have similar access to amenities, and face the same local conditions - except that some are just north of Ontario Street while others are just south of it.
+Prestigious neighbourhoods usually also have better schools, amenities, or access to jobs, making the value of status hard to separate from the value of the place itself. We ask whether buyers pay extra for the West Side label in Vancouver, even when nearby homes offer very similar physical surroundings.
 
-**Key findings:**
+## A boundary that changes the address, not the street
 
-1. Homes north of Ontario Street sell for about **15% more** than comparable homes south of the street
-2. This premium exists even after controlling for all measurable neighborhood characteristics
-3. The premium appears to reflect pure "prestige" - the social cachet of being in a more desirable area
+Ontario Street is the historic dividing line between Vancouver's West Side and East Side. It is a quiet residential street rather than a highway, river, or municipal border. For homes on east-west streets, however, crossing Ontario immediately changes the address prefix from "East" to "West."
 
-The figure below shows our main result. We compare the price premium at Ontario Street (the filled dot) to similar boundaries at other streets in Vancouver (the empty circles). Ontario Street shows a large, statistically significant premium, while the placebo streets show no systematic price differences:
+Using residential sales from 2001 to 2024, we compare properties within 150 metres of Ontario Street. The analysis controls for property characteristics, census tract, and sale timing so that the remaining discontinuity at the boundary captures the value associated with the West Side address.
+
+## What we find
+
+- Comparable single-family homes on the west side sell for **20.5% more** than homes just east of Ontario Street.
+- Strata homes show an estimated **11.0% premium**.
+- At 2021 prices, the single-family estimate is roughly **$500,000** on the average east-side home in the sample.
+- The single-family result remains large across alternative distances from the boundary, standard-size homes, different neighbourhoods and time periods, and controls for local income.
+
+## A useful reality check
+
+We repeat the same exercise at other quiet north-south streets that do not coincide with school catchment changes. The filled point below is Ontario Street; the open points are placebo boundaries. Ontario stands out: none of the comparison streets produces a single-family estimate of similar magnitude.
 
 ![Ontario Street vs Placebo Streets](./placebo.png)
 
-**Why does this matter?**
+*Estimated single-family price differences at Ontario Street and comparable placebo boundaries. Bars show 95% confidence intervals.*
 
-Understanding prestige premiums has important implications for housing policy and urban development. If homebuyers pay substantial premiums for prestige rather than tangible amenities, this suggests:
-- Neighborhood reputations can become self-reinforcing and difficult to change
-- Efforts to improve struggling neighborhoods may face headwinds from reputation effects
-- Housing affordability challenges may be partly driven by the geographic concentration of prestige
+## Why it matters
 
-This research helps us understand that "location, location, location" isn't just about physical amenities - it's also about social perceptions and neighborhood identity.
+Housing values reflect more than buildings and access to amenities. Neighbourhood identity itself can be capitalized into prices, reinforcing residential sorting and creating an additional barrier to buying into a high-status area. For researchers and policymakers, the result also means that estimates of school, transit, or amenity values can be misleading when neighbourhood prestige is left out.

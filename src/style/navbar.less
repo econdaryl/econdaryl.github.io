@@ -5,10 +5,11 @@ nav {
 	position: fixed;
 	width: 100%;
 	justify-content: space-between;
-	padding: 22px 44px;
+	padding: 12px 32px;
+	box-sizing: border-box;
 	align-items: center;
 	z-index: 99;
-	transition: height .25s;
+	transition: padding .25s;
 
 	#menu-open{
 		position: absolute;
@@ -22,17 +23,17 @@ nav {
 	}
 
 	img {
-		width: 46px;
+		width: 36px;
 		height: auto;
 		align-items: center;
 		transition: width 0.25s;
 	}
 
 	&.scrolled {
-		padding: 12px 36px;
+		padding: 8px 32px;
 
 		img {
-			width: 34px;
+			width: 30px;
 		}
 	}
 
@@ -187,16 +188,17 @@ nav {
 @media only screen and (max-width: 800px) {
   	nav{
 		justify-content: center;
+		padding: 10px 24px;
 
 		img {
-			width: 50px;
+			width: 36px;
 		}
 
 		&.scrolled {
-			padding: 10px 36px;
+			padding: 8px 24px;
 
 			img {
-				width: 32px;
+				width: 30px;
 			}
 		}
 
