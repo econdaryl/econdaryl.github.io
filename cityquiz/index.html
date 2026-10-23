@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4f2eb"><meta name="description" content="How much of Canada can you name? An untimed geography game built around population-defined cities.">
+<title>Canada, by heart — City Quiz</title>
+<link rel="stylesheet" href="./style.css?v=4">
+</head>
+<body>
+<header class="masthead"><a class="brand" href="./" aria-label="Canada, by heart home"><span class="brand-mark" aria-hidden="true">✳</span> CANADA, BY HEART</a><nav><span class="edition">A geography game</span><button class="text-button" id="about">How to play <span aria-hidden="true">↗</span></button></nav></header>
+<main class="layout">
+<section class="play-panel" aria-label="Quiz controls">
+<div class="eyebrow">FROM COAST TO COAST TO COAST</div>
+<h1>A country.<br> A thousand<br> <em>familiar places.</em></h1>
+<p class="intro">How much of Canada can you name?<br>Start anywhere. See how far you get.</p>
+<form id="guess-form" autocomplete="off">
+<label for="guess">Name a city or town</label>
+<div class="guess-wrap"><input id="guess" name="guess" placeholder="Try your hometown…" spellcheck="false" autocapitalize="words" disabled maxlength="100"><button type="submit" id="submit-guess" aria-label="Submit city" disabled>↵</button></div>
+<div class="search-options"><select id="province" aria-label="Limit guesses to a province or territory"><option value="">All provinces & territories</option></select><span>Enter to add</span></div>
+<p id="feedback" class="feedback" role="status" aria-live="polite">Loading your map…</p>
+<div id="choices" class="choices" aria-label="Choose a matching city" hidden></div>
+</form>
+<div class="stats"><div><strong id="count">—</strong><span>cities found <small id="total"></small></span></div><div><strong id="coverage">0<span>%</span></strong><span>population reached<small id="population-reached">0 people</small></span></div></div>
+<div class="progress-track" aria-label="City progress"><div id="progress"></div></div>
+<div class="session"><span><span id="session-state"></span></span><time id="timer">00:00</time></div>
+<div class="found-heading"><h2>Your places</h2><select id="places-sort" aria-label="Sort your places"><option value="recent">Most recent</option><option value="population">Population</option></select><span id="saved-status">Saved on this device</span></div>
+<div id="found-list" class="found-list"><div class="empty"><span aria-hidden="true">⌖</span><p>Your first place is out there.<br>Put it on the map.</p></div></div>
+<div id="milestones" class="milestones" aria-label="Population milestones"></div>
+<div class="game-actions"><button id="finish" class="text-button" disabled>Finish & reveal</button><button id="reset" class="text-button" disabled>Start over</button><button id="share" class="text-button" disabled>Copy score</button></div>
+</section>
+<section class="map-panel" aria-label="Interactive Canada map">
+<div class="map-top"><div><span class="eyebrow">YOUR CANADIAN ATLAS</span><p id="map-caption">One place at a time.</p></div><label class="boundary-toggle"><input type="checkbox" id="boundaries"> Show city outlines</label></div>
+<div class="map-stage" id="map-stage"><svg id="map" role="img" aria-label="Map of Canada. Named cities appear as you play." tabindex="0" preserveAspectRatio="xMidYMid meet"><title>Canada city quiz map</title><g id="land"></g><g id="outlines"></g><g id="found-shapes"></g><g id="dots"></g></svg><div id="map-loading" class="map-loading">Preparing your atlas…</div><div id="tooltip" class="tooltip" hidden></div></div>
+<div class="map-tools"><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-out" aria-label="Zoom out">−</button><button id="fit" aria-label="Show all Canada">⌖</button></div>
+<div class="map-bottom"><div class="legend"><div class="population-legend" aria-label="Population scale: lighter for one thousand people, darker for three million or more"><span>POPULATION</span><div class="population-ramp"></div><div class="population-ticks"><span>1k</span><span>10k</span><span>100k</span><span>3m+</span></div></div><label><input id="follow" type="checkbox"> Follow my guesses</label></div><span class="map-hint">Drag to explore · scroll to zoom</span></div>
+</section>
+</main>
+<footer><span>Many places. One Canada.</span><button class="text-button" id="data-info">About the map & data</button><span>Made by Daryl · <a href="https://econdaryl.github.io/">Back to website ↗</a></span></footer>
+<dialog id="about-dialog"><button class="dialog-close" aria-label="Close dialog">×</button><span class="eyebrow">A LITTLE LOCAL KNOWLEDGE</span><h2>Canada, by heart.</h2><p>Type a city or town and press Enter. Each correct answer colours its area on the map. Darker colours mean more people, on a logarithmic population scale. Your progress is saved in this browser.</p><p>These areas follow concentrations of people rather than municipal borders. Nearby towns may share one area: naming any of its recorded settlements counts, but that area can only be scored once.</p><p>Accents, capital letters and common Saint/St. spellings are flexible. Exact city names take priority over secondary names; the largest matching area wins. Add a province, like “Stirling, AB” or “Stirling Alberta”, to choose a specific place. A typed province overrides the dropdown.</p><p>Use “Finish & reveal” to see the remaining answers. Your score will still reflect only the places you found yourself.</p><button class="primary dialog-done">Let’s explore</button></dialog>
+<dialog id="data-dialog"><button class="dialog-close" aria-label="Close dialog">×</button><span class="eyebrow">BEHIND THE ATLAS</span><h2>Places, not city limits.</h2><p>The map uses 2025 GHSL projected population, smoothed at 3 km. Small catchments merge only through shared borders. Each playable area is contiguous and has at least 1,000 people; isolated smaller islands are excluded.</p><p>Names and accepted guesses come from GeoNames settlement records. Where settlement population is unknown, a candidate name is used. These names are a first pass and may need correction.</p><p id="dataset-detail"></p><p>Population coverage measures the playable areas, not all of Canada. Polygons are simplified for display; population totals come from the unsimplified analysis. Population figures are model estimates, not official municipal census counts.</p><div class="sources"><a href="https://human-settlement.emergency.copernicus.eu/ghs_wup_pop_r2025a.php">Population: European Commission JRC / GHSL (CC BY 4.0)</a><a href="https://www.geonames.org/">Place names: GeoNames (CC BY 4.0)</a><a href="https://www.statcan.gc.ca/">Boundaries: Statistics Canada (Open Licence)</a><a href="https://cityquiz.io/">Inspired by cityquiz.io · an independent project</a></div><button class="primary dialog-done">Back to the map</button></dialog>
+<dialog id="confirm-dialog"><h2 id="confirm-title"></h2><p id="confirm-body"></p><div class="confirm-actions"><button id="cancel" class="secondary">Keep playing</button><button id="confirm" class="primary">Confirm</button></div></dialog>
+<script type="module" src="./app.js?v=5"></script>
+</body></html>
