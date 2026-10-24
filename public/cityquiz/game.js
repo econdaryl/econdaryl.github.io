@@ -53,3 +53,16 @@ export function populationColor(population) {
   const rgb=stops[segment].map((v,i)=>Math.round(v+(stops[segment+1][i]-v)*f));
   return `rgb(${rgb.join(',')})`;
 }
+
+// Province denominators include only playable cities, assigned to their main province.
+export function provinceCoverage(cities, found) {
+  const foundIds=new Set(found), result={};
+  for(const city of cities){
+    const code=city.province;
+    if(!result[code])result[code]={total:0,reached:0};
+    result[code].total+=city.population;
+    if(foundIds.has(city.id))result[code].reached+=city.population;
+  }
+  for(const entry of Object.values(result))entry.percent=entry.total?100*entry.reached/entry.total:0;
+  return result;
+}

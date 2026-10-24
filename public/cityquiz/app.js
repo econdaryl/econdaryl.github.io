@@ -1,4 +1,4 @@
-import {indexCities,matches,restore,score,populationColor} from './game.js?v=4';
+import {indexCities,matches,restore,score,populationColor,provinceCoverage} from './game.js?v=6';
 const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg';
 const number=new Intl.NumberFormat('en-CA');
 const provinces={AB:'Alberta',BC:'British Columbia',MB:'Manitoba',NB:'New Brunswick',NL:'Newfoundland & Labrador',NS:'Nova Scotia',NT:'Northwest Territories',NU:'Nunavut',ON:'Ontario',PE:'Prince Edward Island',QC:'Quebec',SK:'Saskatchewan',YT:'Yukon'};
@@ -52,13 +52,23 @@ function render(){
     const ordered=[...state.found].reverse();
     if($('places-sort').value==='population')ordered.sort((a,b)=>byId.get(b).population-byId.get(a).population);
     ordered.forEach((id,i)=>{
-      const city=byId.get(id),button=document.createElement('button');button.className='found-row';
+      const city=byId.get(id),row=document.createElement('div'),button=document.createElement('button');row.className='found-row';button.className='found-focus';button.type='button';
       const label=document.createElement('span'),rank=document.createElement('span');rank.className='rank';rank.textContent=$('places-sort').value==='population'?i+1:found.size-i;
       label.append(rank,document.createTextNode(city.name+' '));const province=document.createElement('small');province.textContent=city.province;label.append(province);
       const pop=document.createElement('small');pop.textContent=number.format(city.population);button.append(label,pop);
-      button.addEventListener('click',()=>focusCity(city));$('found-list').append(button);
+      button.addEventListener('click',()=>focusCity(city));
+      const remove=document.createElement('button');remove.type='button';remove.className='remove-city';remove.textContent='×';remove.setAttribute('aria-label',`Remove ${city.name}, ${city.province}`);remove.title=`Remove ${city.name}`;
+      remove.addEventListener('click',()=>removeCity(id));row.append(button,remove);$('found-list').append(row);
     });
   }else{$('found-list').innerHTML='<div class="empty"><span aria-hidden="true">⌖</span><p>Your first place is out there.<br>Put it on the map.</p></div>';}
+  const provincial=provinceCoverage(data.cities,state.found);$('province-coverage').replaceChildren();
+  for(const [code,name] of Object.entries(provinces)){
+    const entry=provincial[code]||{total:0,reached:0,percent:0},row=document.createElement('div');row.className='province-progress';
+    const label=document.createElement('span');label.textContent=code;label.title=name;
+    const value=document.createElement('span');value.textContent=entry.total?`${entry.percent.toFixed(1)}%`:'—';
+    const bar=document.createElement('progress');bar.max=100;bar.value=entry.percent;bar.setAttribute('aria-label',`${name}: ${number.format(entry.reached)} of ${number.format(entry.total)} playable people reached`);
+    row.title=`${name}: ${number.format(entry.reached)} / ${number.format(entry.total)} people`;row.append(label,value,bar);$('province-coverage').append(row);
+  }
   $('milestones').replaceChildren();
   for(const [threshold,label] of [[1000000,'1 million'],[500000,'500k'],[100000,'100k']]){
     const eligible=data.cities.filter(city=>city.population>threshold), line=document.createElement('div');
@@ -70,6 +80,14 @@ function render(){
   $('reset').disabled=false;$('share').disabled=false;
   if(state.finished)$('map-caption').textContent='Every place has a story.';
   save();tick();
+}
+function removeCity(id){
+  const position=state.found.indexOf(id);if(position<0)return;
+  const city=byId.get(id);state.found.splice(position,1);$('tooltip').hidden=true;render();
+  message(`${city.name} removed. `);
+  const undo=document.createElement('button');undo.type='button';undo.className='undo-remove';undo.textContent='Undo';
+  undo.addEventListener('click',()=>{if(!state.found.includes(id))state.found.splice(Math.min(position,state.found.length),0,id);render();$('map-caption').textContent=`Restored: ${city.name}.`;message(`${city.name} restored.`,'success');});$('feedback').append(undo);
+  $('map-caption').textContent=`Removed: ${city.name}.`;
 }
 function accept(city){
   $('choices').hidden=true;$('choices').replaceChildren();
@@ -167,7 +185,10 @@ async function start(){
         if(migrated){state=migrated;break;}
       }}catch{$('saved-status').textContent='Saving unavailable in this browser';}
     originalView=data.extent;view=[...originalView];
-    for(const path of data.provinces)$('land').append(element('path',{d:path}));
+    for(const path of data.provinces){$('land').append(element('path',{d:path}));$('terrain-clip').append(element('path',{d:path,'clip-rule':'evenodd'}));$('province-lines').append(element('path',{d:path}));}
+    $('terrain-mask').append(element('rect',{x:0,y:0,width:data.extent[2],height:data.extent[3],fill:'white'}));
+    for(const city of data.cities)$('terrain-mask').append(element('path',{d:city.path,fill:'black','fill-rule':'evenodd'}));
+    $('terrain').setAttribute('width',data.extent[2]);$('terrain').setAttribute('height',data.extent[3]);
     for(const[code,name]of Object.entries(provinces)){$('province').append(new Option(name,code));}
     const s=data.summary;$('dataset-detail').textContent=`This edition has ${number.format(s.playable_cities)} playable areas. ${number.format(s.unmatched_catchments)} additional areas still have no settlement-name match and are excluded from the quiz until reviewed.`;
     ready=true;started=performance.now();setView(originalView);render();$('map-loading').hidden=true;
