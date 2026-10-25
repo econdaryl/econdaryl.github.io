@@ -1,4 +1,4 @@
-import {indexCities,matches,restore,score,populationColor,provinceCoverage} from './game.js?v=6';
+import {indexCities,matches,restore,score,populationColor,provinceCoverage} from './game.js?v=7';
 const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg';
 const number=new Intl.NumberFormat('en-CA');
 const provinces={AB:'Alberta',BC:'British Columbia',MB:'Manitoba',NB:'New Brunswick',NL:'Newfoundland & Labrador',NS:'Nova Scotia',NT:'Northwest Territories',NU:'Nunavut',ON:'Ontario',PE:'Prince Edward Island',QC:'Quebec',SK:'Saskatchewan',YT:'Yukon'};
@@ -31,9 +31,11 @@ function focusCity(city){
   $('map-caption').textContent=`${city.name}${city.province?', '+city.province:''}`;
 }
 function appendShape(city,revealed=false){
-  const path=element('path',{d:city.path,'data-id':city.id,class:revealed?'revealed':'','aria-label':city.name});
-  path.style.fill=populationColor(city.population);
-  $('found-shapes').append(path);
+  for(const part of city.parts || [city]){
+    const path=element('path',{d:part.path,'data-id':city.id,class:revealed?'revealed':'','aria-label':city.name});
+    path.style.fill=populationColor(part.population);
+    $('found-shapes').append(path);
+  }
   if(!revealed){const dot=element('circle',{cx:city.point[0],cy:city.point[1],r:view[2]/300});dot.style.fill=populationColor(city.population);$('dots').append(dot);}
 }
 function render(){
