@@ -48,7 +48,7 @@ export function score(found, byId) {
 // Logarithmic population scale: 1k -> pale, 3m+ -> dark.
 export function populationColor(population) {
   const t=Math.max(0,Math.min(1,(Math.log10(Math.max(1000,population))-3)/(Math.log10(3000000)-3)));
-  const stops=[[241,216,188],[211,149,108],[171,88,59],[112,39,25]];
+  const stops=[[255,241,205],[244,168,94],[194,65,37],[65,5,20]];
   const segment=Math.min(2,Math.floor(t*3)),f=t*3-segment;
   const rgb=stops[segment].map((v,i)=>Math.round(v+(stops[segment+1][i]-v)*f));
   return `rgb(${rgb.join(',')})`;
