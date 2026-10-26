@@ -1,4 +1,4 @@
-import {indexCities,matches,restore,score,populationColor,provinceCoverage} from './game.js?v=8';
+import {indexCities,matches,restore,score,populationColor,provinceCoverage} from './game.js?v=9';
 const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg';
 const number=new Intl.NumberFormat('en-CA');
 const provinces={AB:'Alberta',BC:'British Columbia',MB:'Manitoba',NB:'New Brunswick',NL:'Newfoundland & Labrador',NS:'Nova Scotia',NT:'Northwest Territories',NU:'Nunavut',ON:'Ontario',PE:'Prince Edward Island',QC:'Quebec',SK:'Saskatchewan',YT:'Yukon'};
@@ -31,12 +31,21 @@ function focusCity(city){
   $('map-caption').textContent=`${city.name}${city.province?', '+city.province:''}`;
 }
 function appendShape(city,revealed=false){
-  for(const part of city.parts || [city]){
-    const path=element('path',{d:part.path,'data-id':city.id,class:revealed?'revealed':'','aria-label':city.name});
+  const group=element('g',{class:'city-shape'+(revealed?' revealed':''),'data-id':city.id});
+  const parts=city.parts || [city];
+  // A base fill prevents hairline gaps between independently simplified pieces.
+  const base=element('path',{d:city.path,'data-id':city.id,class:'city-part','aria-label':city.name});
+  base.style.fill=populationColor(Math.max(...parts.map(part=>part.population)));
+  group.append(base);
+  for(const part of parts){
+    const path=element('path',{d:part.path,'data-id':city.id,class:'city-part','aria-label':city.name});
     path.style.fill=populationColor(part.population);
-    $('found-shapes').append(path);
+    group.append(path);
   }
+  group.append(element('path',{d:city.path,class:'city-outline','aria-hidden':'true'}));
+  $('found-shapes').append(group);
 }
+
 function render(){
   const found=new Set(state.found);$('count').textContent=number.format(found.size);
   const reached=score(state.found,byId);
