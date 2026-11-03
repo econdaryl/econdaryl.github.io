@@ -3,6 +3,69 @@ export default function Research() {
     <section className="research section-shell content-section" id="research">
       <h2 className="section-title">Research</h2>
       <div className="paper-heading">
+        <p className="eyebrow">Job Market Paper</p>
+        <h3>The Metro Is the Market</h3>
+        <p className="research-subtitle">Why Local Airbnb Regulations May Not Lower Rents</p>
+        <a className="button-link" href='/research/airbnb-cea.pdf'>View presentation (PDF)</a>
+      </div>
+
+      <article className="research-card">
+        <section>
+          <h2>Abstract</h2>
+          <p>
+            Restricting short-term rentals can return housing to residents within a municipality without substantially increasing residential housing availability across its metropolitan market. Visitors displaced from regulated locations may stay elsewhere in the same metro, inducing landlords there to move housing into short-term use. I develop a spatial equilibrium model that makes this offset explicit. With minimal assumptions, local regulation reallocates short-term rentals without changing residential rents. Short-term rental prices rise and visitor utility falls. Evidence presented for New York City's Local Law 18 shows higher short-term rental prices, an outward shift in short-term rental activity, and no sustained decline in residential rents in the reported comparisons, consistent with the model predictions.
+          </p>
+          <figure>
+            <a href="/research/airbnb-prepost-shares.pdf" aria-label="View change in NYC Airbnb shares figure as a PDF">
+              <img src="/research/airbnb-prepost-shares.png" alt="Map of changes in NYC Airbnb shares, showing declines concentrated in Manhattan and increases in many outer neighbourhoods. Purple indicates increases and red indicates decreases in log share." />
+            </a>
+            <figcaption>
+              Change in NYC Airbnb shares. Source: Inside Airbnb.{' '}
+              <a href="/research/airbnb-prepost-shares.pdf">View figure (PDF)</a>.
+            </figcaption>
+          </figure>
+        </section>
+        <section>
+          <h2>The question</h2>
+          <p>
+            Can local restrictions on short-term rentals improve housing affordability when visitors
+            can stay elsewhere in the same metropolitan area? Housing returned to residents inside
+            a regulated city may be offset by housing converted to tourist use outside its borders.
+          </p>
+        </section>
+
+        <section>
+          <h2>The mechanism</h2>
+          <p>
+            I develop a spatial equilibrium model in which visitors and residents compete for housing.
+            When metropolitan visitor demand stays fixed and eligible locations can absorb displaced
+            visitors, local restrictions reallocate short-term rentals without lowering residential
+            rents. Visitors instead face higher accommodation prices and stay farther from the centre.
+          </p>
+        </section>
+
+        <section>
+          <h2>Evidence from New York City</h2>
+          <p>
+            Evidence from New York City's Local Law 18 shows higher short-term rental prices,
+            an outward shift in short-term rental activity, and no sustained decline in residential
+            rents in the reported comparisons. These patterns are consistent with metropolitan
+            substitution, although they do not establish complete displacement or an exactly zero
+            effect on rents.
+          </p>
+        </section>
+
+        <section>
+          <h2>Why it matters</h2>
+          <p>
+            Municipal boundaries need not define the housing market. The affordability gains from
+            local short-term rental regulation depend on how much tourist housing demand falls
+            across the metro, and how much simply moves elsewhere within it.
+          </p>
+        </section>
+      </article>
+
+      <div className="paper-heading">
         <p className="eyebrow">Working paper</p>
         <h3>The Value of W</h3>
         <p className="research-subtitle">Pricing Neighbourhood Prestige</p>
