@@ -6,7 +6,7 @@ export default function Research() {
         <p className="eyebrow">Job Market Paper</p>
         <h3>The Metro Is the Market</h3>
         <p className="research-subtitle">Why Local Airbnb Regulations May Not Lower Rents</p>
-        <a className="button-link" href='/research/airbnb-cea.pdf'>View presentation (PDF)</a>
+        <a className="button-link" href='/research/jmp_v1.pdf'>View draft (PDF)</a>
       </div>
 
       <article className="research-card">
